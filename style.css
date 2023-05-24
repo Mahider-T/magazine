@@ -57,3 +57,46 @@ header .icon-nav{
     font-weight: 500px;
     font-size: xx-large;
 }
+
+.hero{
+    height: 500px;
+    /* border: solid red 5px; */
+    display: flex;
+    background-image: url(hero.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+}
+.hero img{
+    width: 100%;
+}
+.hero-text{
+    color: white;
+}
+
+main .container {
+    height: auto;
+    margin: 3rem 10vw 3rem 10vw;   
+    box-sizing: border-box;
+    border: 2px solid red;
+}
+
+.container{
+    /* float: left; */
+    display: flex;
+    flex-direction: row;
+}
+.divider{
+    background-color: green;
+    width: 33.33%;
+    height: 400px;
+    padding: 5%;
+
+}
+.container .divider_two{
+    background-color: yellow;
+}
+.container .divider_three{
+    background-color: red;
+}
