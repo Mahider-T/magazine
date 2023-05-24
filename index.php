@@ -49,7 +49,7 @@
             <!-- <div class = "test" style="height: 500px; width: 500px; background-color:aqua"></div> -->
             <div class = "divider divider_one">
                 <h1>Who killed Jefferey?</h1><br>
-                <img src="ldr.jpg" width="100px" height="100px"><br>
+                <img src="ldr.jpg" width="100px" height="100px" class = "writer"><br>
                 <sub style="color:gray">Lana Del Ray</sub>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Maiores nobis atque debitis rem asperiores eveniet provident 
@@ -59,7 +59,9 @@
                     laborum, accusamus natus esse, mollitia suscipit maxime.</p>
             </div>
             <div class = "divider divider_two">
-            <h1>Who killed Jefferey?</h1><br>
+                <h1>Who killed Jefferey?</h1><br>
+                <img src="mia.jpg" width="100px" height="100px" class = "writer"><br>
+                <sub style="color:gray">Mia Khalifa</sub>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Maiores nobis atque debitis rem asperiores eveniet provident 
                         tempora eaque laudantium nisi voluptatibus assumenda incidunt 
@@ -69,6 +71,8 @@
             </div>
             <div class = "divider divider_three">
                 <h1>Who killed Jefferey?</h1><br>
+                <img src="dt.png" width="100px" height="100px" class = "writer"><br>
+                <sub style="color:gray">Donald Trump</sub>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Maiores nobis atque debitis rem asperiores eveniet provident 
                         tempora eaque laudantium nisi voluptatibus assumenda incidunt 
@@ -78,5 +82,37 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class = "title">
+            <p>Newspaper</p><hr> 
+            <p>Company</p><hr> 
+            <p>Categories</p>
+        </div><br>
+        <div class = "father_container">
+            <div class = "first footer_links">
+                Daily newspaper magazine with interesting 
+                    scientific articles and guides on modern technology 
+                    and fashion.
+            </div>
+            <div class = "second footer_links">
+                <ul>
+                    <li><a href = "">Home page</a></li>
+                    <li><a href = "">About us</a></li>
+                    <li><a href = "">Blog</a></li>
+                    <li><a href = "">Simple post</a></li>
+                    <li><a href = "">Shop</a></li>
+                </ul>
+            </div>
+            <div class = "third footer_links">
+                <ul>
+                    <li><a href = "">Home page</a></li>
+                    <li><a href = "">Privacy policy</a></li>
+                    <li><a href = "">Terms and conditions</a></li>
+                    <li><a href = "">Contact</a></li>
+                    <li><a href = "">Newslatter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
