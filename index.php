@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class = "top-header">
-            <p>Magazine and newspaper with news around AAU.</p>
+            <p>Magazine and newspaper with news around AAU</p>
             <ul>
                 <li><a href = "contact.html">Contact</a></li>
                 <li><a href= "privacy.html">Privacy Policy</a></li>
@@ -26,10 +26,10 @@
                 <li><a href="blog.html">Blog</a></li>
             </ul>
             <ul class = "icon-nav">
-                <li><a href = "instagram.com"></a>PNG</li>
-                <li><a href = "facebook.com"></a>PNG</li>
-                <li><a href = "linkedin.com"></a>PNG</li>
-                <li><a href = "twitter.com"></a>PNG</li>
+                <li><a href="https://www.freepnglogos.com/pics/logo-ig-png" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-instagram-icon-download-icons-12.png" width="24" alt="logo ig, instagram icon download icons" /></a></li>
+                <li><a href="https://www.freepnglogos.com/pics/logo-facebookpng" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-supportive-guru-14.png" width="20" alt="Facebook logo png, Black square with F letter" /></a></li>
+                <li><a href="https://www.freepnglogos.com/pics/logo-twitter-png" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/twitter-logo-png/black-and-white-twitter-logo-png-hq-download-25.png" width="22" alt="black and white twitter logo png hq download" /></a></li>
+                <li><a href="https://www.freepnglogos.com/pics/telegram-logo" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/telegram-logo-12.png" width="20" alt="telegram logo" /></a></li>
             </ul>
         </div>
     </header>
