@@ -35,14 +35,14 @@
     </header>
     <div class = "hero">
         <!-- <img src = "hero.jpg"  height="500px"> -->
-        <div class = "button left-button"><a href= "#some_id"><img src = "left_circle_arrow.svg "></a></div>
+        <div class = "button left-button"><a href= "#some_id"><img src = "Icons/left_circle_arrow.svg "></a></div>
         <div class="hero-text">
             <h2>What is this garbage?</h2><br>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing<br> 
                 elit. Eos, numquam iure. Possimus perspiciatis quas 
                 officiis.</p>
         </div>
-        <div class = "button right-button"><a href= "#some_id"><img src = "right_circle_arrow.svg "></a></div>
+        <div class = "button right-button"><a href= "#some_id"><img src = "Icons/right_circle_arrow.svg "></a></div>
     </div>
     <main>
         <div class = "container">
