@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nanum+Myeongjo&family=Shadows+Into+Light&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -7,17 +9,51 @@
     color: white;
 }
 .top-header{
-    height: 3rem;
+    height: 2rem;
     display: flex;
     background-color: black;
     color: white;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: auto;
+    padding: 0px 15px 0px 15px;
     align-items: center;
-    font-size: 19px;
+    font-size: 14px;
+    font-family: 'Libre Baskerville', serif;
 }
 .top-header ul{
     list-style-type: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+}
+.bottom-header {
+    display: flex;
+    height: 4rem;
+    background-color: lightgrey;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 15px;
+    font-weight: bold;
+    font-size: 20px;
+
+
 }
 
+header ul{
+    display: flex;
+    list-style-type: none; 
+    gap: 2rem;
+}
+header .icon-nav{
+    gap: 20px;
+} 
+
+.bottom-header a{
+    text-decoration: none;
+    color: black
+}
+.bottom-header p{
+    font-weight: 500px;
+    font-size: xx-large;
+}
