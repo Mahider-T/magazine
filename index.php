@@ -14,7 +14,7 @@
             <p>Magazine and newspaper with news around AAU</p>
             <ul>
                 <li><a href = "contact.html">Contact</a></li>
-                <li><a href= "privacy.html">Privacy Policy</a></li>
+                <li><a href= "auth.php">Login/Signup</a></li>
             </ul>
         </div>
         <div class = "bottom-header">
