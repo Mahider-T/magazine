@@ -62,7 +62,7 @@ header .icon-nav{
     height: 500px;
     /* border: solid red 5px; */
     display: flex;
-    background-image: url(hero.jpg);
+    background-image: url(Images/hero.jpg);
     display: flex;
     justify-content: space-between;
     align-items: center;

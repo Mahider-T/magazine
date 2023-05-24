@@ -26,10 +26,10 @@
                 <li><a href="blog.html">Blog</a></li>
             </ul>
             <ul class = "icon-nav">
-                <li><a href="https://www.freepnglogos.com/pics/logo-ig-png" title="Image from freepnglogos.com"><img src="instagram_logo.png" width="24" alt="instagram logo" /></a></li>
-                <li><a href="https://www.freepnglogos.com/pics/logo-facebookpng" title="Image from freepnglogos.com"><img src="facebook_logo.png" width="20" alt="Facebook logo " /></a></li>
-                <li><a href="https://www.freepnglogos.com/pics/logo-twitter-png" title="Image from freepnglogos.com"><img src="twitter_logo.png" width="22" alt="twitter logo " /></a></li>
-                <li><a href="https://t.me/+E3jGdJxYKAY4YmVk" title="Image from freepnglogos.com"><img src="telegram_logo.png" width="20" alt="telegram logo" /></a></li>
+                <li><a href="https://www.freepnglogos.com/pics/logo-ig-png" title="Image from freepnglogos.com"><img src="Icons/instagram_logo.png" width="24" alt="instagram logo" /></a></li>
+                <li><a href="https://www.freepnglogos.com/pics/logo-facebookpng" title="Image from freepnglogos.com"><img src="Icons/facebook_logo.png" width="20" alt="Facebook logo " /></a></li>
+                <li><a href="https://www.freepnglogos.com/pics/logo-twitter-png" title="Image from freepnglogos.com"><img src="Icons/twitter_logo.png" width="22" alt="twitter logo " /></a></li>
+                <li><a href="https://t.me/+E3jGdJxYKAY4YmVk" title="Image from freepnglogos.com"><img src="Icons/telegram_logo.png" width="20" alt="telegram logo" /></a></li>
             </ul>
         </div>
     </header>
@@ -49,7 +49,7 @@
             <!-- <div class = "test" style="height: 500px; width: 500px; background-color:aqua"></div> -->
             <div class = "divider divider_one">
                 <h1>Who killed Jefferey?</h1><br>
-                <img src="ldr.jpg" width="100px" height="100px" class = "writer"><br>
+                <img src="Images/ldr.jpg" width="100px" height="100px" class = "writer"><br>
                 <sub style="color:gray">Lana Del Ray</sub>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Maiores nobis atque debitis rem asperiores eveniet provident 
@@ -60,7 +60,7 @@
             </div>
             <div class = "divider divider_two">
                 <h1>Who killed Jefferey?</h1><br>
-                <img src="mia.jpg" width="100px" height="100px" class = "writer"><br>
+                <img src="Images/mia.jpg" width="100px" height="100px" class = "writer"><br>
                 <sub style="color:gray">Mia Khalifa</sub>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Maiores nobis atque debitis rem asperiores eveniet provident 
@@ -71,7 +71,7 @@
             </div>
             <div class = "divider divider_three">
                 <h1>Who killed Jefferey?</h1><br>
-                <img src="dt.png" width="100px" height="100px" class = "writer"><br>
+                <img src="Images/dt.png" width="100px" height="100px" class = "writer"><br>
                 <sub style="color:gray">Donald Trump</sub>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Maiores nobis atque debitis rem asperiores eveniet provident 
