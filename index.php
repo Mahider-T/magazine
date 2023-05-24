@@ -9,7 +9,29 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-   <?php echo "hello"?>
-   <h1>This is pure crap</h1>
+    <header>
+        <div class = "top-header">
+            <p>Magazine and newspaper with news around AAU.</p>
+            <ul>
+                <li><a href = "contact.html">Contact</a></li>
+                <li><a href= "privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class = "bottom-header">
+            <p>Newspaper.</p>
+            <ul class = "text-nav">
+                <li><a href="home-page.html">Home page</a></li>
+                <li><a href="simple-post.html">Simple post</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <ul class = "icon-nav">
+                <li><a href = "instagram.com"></a>PNG</li>
+                <li><a href = "facebook.com"></a>PNG</li>
+                <li><a href = "linkedin.com"></a>PNG</li>
+                <li><a href = "twitter.com"></a>PNG</li>
+            </ul>
+        </div>
+    </header>
 </body>
 </html>
