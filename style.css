@@ -103,7 +103,50 @@ main .container {
 /* .container .divider_three{
      background-color: red 
 } */
-.divider_one img {
+.writer {
     border-radius: 50%;
     object-fit: cover;
+}
+
+footer{
+    height: 300px;
+    width: 100%;
+    background-color: black;
+    color: white
+}
+hr{
+    color:white;
+}
+footer .title {
+    display: flex;
+    justify-content: space-around;
+    padding: 70px 50px 0px 50px;
+    font-size: xx-large;
+}
+footer .footer_links{
+    width: 300px;
+}
+footer .father_container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 50px 0px 50px;
+    gap:30px;
+}
+footer ul{
+    list-style-type: none;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer .footer_links{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.father_container li{
+    margin-bottom: 5px ;
 }
