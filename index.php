@@ -48,6 +48,9 @@
         <div class = "container">
             <!-- <div class = "test" style="height: 500px; width: 500px; background-color:aqua"></div> -->
             <div class = "divider divider_one">
+                <h1>Who killed Jefferey?</h1><br>
+                <img src="ldr.jpg" width="100px" height="100px"><br>
+                <sub style="color:gray">Lana Del Ray</sub>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Maiores nobis atque debitis rem asperiores eveniet provident 
                     tempora eaque laudantium nisi voluptatibus assumenda incidunt 
@@ -55,8 +58,24 @@
                     Deserunt quod eaque sit iusto doloribus distinctio 
                     laborum, accusamus natus esse, mollitia suscipit maxime.</p>
             </div>
-            <div class = "divider divider_two"></div>
-            <div class = "divider divider_three"></div>
+            <div class = "divider divider_two">
+            <h1>Who killed Jefferey?</h1><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Maiores nobis atque debitis rem asperiores eveniet provident 
+                        tempora eaque laudantium nisi voluptatibus assumenda incidunt 
+                        dolorem fuga, omnis sit dolor reiciendis expedita sapiente facilis accusamus error iusto odio. 
+                        Deserunt quod eaque sit iusto doloribus distinctio 
+                        laborum, accusamus natus esse, mollitia suscipit maxime.</p>
+            </div>
+            <div class = "divider divider_three">
+                <h1>Who killed Jefferey?</h1><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Maiores nobis atque debitis rem asperiores eveniet provident 
+                        tempora eaque laudantium nisi voluptatibus assumenda incidunt 
+                        dolorem fuga, omnis sit dolor reiciendis expedita sapiente facilis accusamus error iusto odio. 
+                        Deserunt quod eaque sit iusto doloribus distinctio 
+                        laborum, accusamus natus esse, mollitia suscipit maxime.</p>
+            </div>
         </div>
     </main>
 </body>
