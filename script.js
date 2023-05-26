@@ -6,9 +6,6 @@ const body = document.querySelector('body');
 // }
 
 
-lorem5
-
-
 
 
 
