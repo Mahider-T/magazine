@@ -150,3 +150,57 @@ footer .footer_links{
 .father_container li{
     margin-bottom: 10px ;
 }
+
+
+/* Below here is a styling for the about us page */
+.about_us{
+    margin: 3rem 20vw 3rem 20vw; 
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    /* min-width: 900px; */
+    
+}
+
+.about_us .about_header{
+    text-align: center;
+    width: 100%;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: xxx-large;
+
+}
+
+.about_us .about1{
+    box-sizing: border-box;
+    border: 1px solid red;
+    min-width: 50%;
+    max-width: 50%;
+    height: 300px;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 0 10px 0;
+}
+
+.about_us .about2{
+    box-sizing: border-box;
+    border: 1px solid red;
+    min-width: 33.333%;
+    max-width: 33.333%;
+    height: 300px;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 0 10px 0;
+}
+
+.bottom_beauty{
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    border: 1px solid green;
+}
+.bb_child{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
