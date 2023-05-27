@@ -21,7 +21,7 @@
             <ul class = "text-nav">
                 <li><a href="home-page.html">Home page</a></li>
                 <li><a href="simple-post.html">Simple post</a></li>
-                <li><a href="about-us.html">About us</a></li>
+                <li><a href="about_us.php">About us</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
             <ul class = "icon-nav">
