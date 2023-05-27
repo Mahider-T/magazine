@@ -7,6 +7,14 @@
     <title>About Us</title>
 </head>
 <body>
-    
+    <?php
+        include('header.php');
+    ?>
+    <main class = "about_us">
+    </main>
+
+    <?php
+        include('footer.php')
+    ?>
 </body>
 </html>
