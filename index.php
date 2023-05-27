@@ -9,30 +9,9 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class = "top-header">
-            <p>Magazine and newspaper with news around AAU</p>
-            <ul>
-                <li><a href = "contact.html">Contact</a></li>
-                <li><a href= "auth.php">Login/Signup</a></li>
-            </ul>
-        </div>
-        <div class = "bottom-header">
-            <p>Newspaper.</p>
-            <ul class = "text-nav">
-                <li><a href="home-page.html">Home page</a></li>
-                <li><a href="simple-post.html">Simple post</a></li>
-                <li><a href="about-us.html">About us</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-            <ul class = "icon-nav">
-                <li><a href="https://www.freepnglogos.com/pics/logo-ig-png" title="Image from freepnglogos.com"><img src="Icons/instagram_logo.png" width="24" alt="instagram logo" /></a></li>
-                <li><a href="https://www.freepnglogos.com/pics/logo-facebookpng" title="Image from freepnglogos.com"><img src="Icons/facebook_logo.png" width="20" alt="Facebook logo " /></a></li>
-                <li><a href="https://www.freepnglogos.com/pics/logo-twitter-png" title="Image from freepnglogos.com"><img src="Icons/twitter_logo.png" width="22" alt="twitter logo " /></a></li>
-                <li><a href="https://t.me/+E3jGdJxYKAY4YmVk" title="Image from freepnglogos.com"><img src="Icons/telegram_logo.png" width="20" alt="telegram logo" /></a></li>
-            </ul>
-        </div>
-    </header>
+    <?php
+        include('header.php')
+    ?>
     <div class = "hero">
         <!-- <img src = "hero.jpg"  height="500px"> -->
         <div class = "button left-button"><a href= "#some_id"><img src = "Icons/left_circle_arrow.svg "></a></div>
@@ -82,37 +61,8 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div class = "title">
-            <p>Newspaper</p><hr> 
-            <p>Company</p><hr> 
-            <p>Categories</p>
-        </div><br>
-        <div class = "father_container">
-            <div class = "first footer_links">
-                Daily newspaper magazine with interesting 
-                    scientific articles and guides on modern technology 
-                    and fashion.
-            </div>
-            <div class = "second footer_links">
-                <ul>
-                    <li><a href = "">Home page</a></li>
-                    <li><a href = "">About us</a></li>
-                    <li><a href = "">Blog</a></li>
-                    <li><a href = "">Simple post</a></li>
-                    <li><a href = "">Shop</a></li>
-                </ul>
-            </div>
-            <div class = "third footer_links">
-                <ul>
-                    <li><a href = "">Home page</a></li>
-                    <li><a href = "">Privacy policy</a></li>
-                    <li><a href = "">Terms and conditions</a></li>
-                    <li><a href = "">Contact</a></li>
-                    <li><a href = "">Newslatter</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <?php
+        include('footer.php')
+    ?>
 </body>
 </html>
