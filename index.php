@@ -21,7 +21,7 @@
                 elit. Eos, numquam iure. Possimus perspiciatis quas 
                 officiis.</p>
         </div>
-        <div class = "button right-button"><a href= "#some_id"><img src = "Icons/right_circle_arrow.svg "></a></div>
+        <div class = "button right-button"><img src = "Icons/right_circle_arrow.svg " id = "right_arrow"></div>
     </div>
     <main>
         <div class = "container">
