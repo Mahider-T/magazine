@@ -34,26 +34,31 @@ const body = document.querySelector('body');
 
 //if user scrolls "too much" or clicks on anything pop up the sign up or login window.
 
-const header = document.querySelector(".hero h2")
 
-const hero = document.querySelector('.hero');
-let background = hero.style.backgroundImage;
+const heroImage1 = document.querySelector('.hero #image1');
+const heroImage2 = document.querySelector('.hero #image2')
 
 const arrow = document.getElementById("right_arrow")
 
-const backgroundGone = [
+const toTheLeft1 = [
     {
         transform: "translatex(-100%)"
     }
 ]
 
-console.log(background)
-const backgroundTiming = {
-    duration: 2000, 
+const toTheLeft1Timing = {
+    duration: 700, 
+    iterations: 1,
+};
+const toTheLeft2Timing = {
+    duration: 699, 
     iterations: 1,
 };
 
+
 arrow.addEventListener("click", ()=>{
-    header.animate(backgroundGone,backgroundTiming)
+    heroImage1.animate(toTheLeft1,toTheLeft1Timing)
+    heroImage2.animate(toTheLeft1,toTheLeft2Timing)
+    heroImage2.style.display = "block";
 })
 
