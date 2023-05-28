@@ -14,21 +14,24 @@
     <br><br><br>
     <main class = "about_us">
         <div class = "about_header"><h1>About us</h1></div>
+        
         <div class = "about1 left first_row">
             <img src = "Images/image2.jpg" width="100%" height="100%">
         </div>
         <div class = "about1 right first_row">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sed. Perferendis unde accusantium porro hic dolores quam, reprehenderit maxime dignissimos dicta in pariatur atque culpa fugit neque provident assumenda Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi praesentium quasi esse ad vel, iste assumenda repellendus laborum aliquam molestias voluptatem, alias architecto officiis. Perferendis ratione laboriosam nobis vero fugiat!</p>
         </div>
+        
+        
         <div class = "about1 left second_row">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sed. Perferendis unde accusantium porro hic dolores quam, reprehenderit maxime dignissimos dicta in pariatur atque culpa fugit neque provident assumenda Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi praesentium quasi esse ad vel, iste assumenda repellendus laborum aliquam molestias voluptatem, alias architecto officiis. Perferendis ratione laboriosam nobis vero fugiat</p>
         </div>
         <div class = "about1 right second_row">
-            <img src = "Images/image4.jpg" width="100%" height="100%">
+            <img src = "Images/image4.jpg" width="100%" height="300px">
         </div>
+        
         <div class = "about2 ">
             <h1> akdjfha ksdjfha</h1>
-            
         </div>
         <div class = "about2 ">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, doloribus ea omnis, deleniti minus, voluptatibus nobis sapiente voluptates saepe nulla odio nam accusamus quos explicabo corporis temporibus earum. Numquam, incidunt?</p>
@@ -36,8 +39,9 @@
         <div class = "about2 ">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, maxime eos? Sed doloribus dolor voluptatibus iste aspernatur autem quas veritatis asperiores omnis, consequuntur ex ratione modi perspiciatis maxime? Ex quia quasi inventore nisi labore, repellat asperiores iste odio porro iusto quibusdam praesentium consequatur aperiam eius? Ab, nam voluptate. Voluptatem, laudantium.</p>
         </div>
+        
         <div class = "about1 left fourth_row">
-            <img src = "Images/image4.jpg" width="100%" height="100%">
+            <img src = "Images/image4.jpg" width="100%" height="300px">
         </div>
         <div class = "about1 right fourth_row">
             <h1>01</h1>
