@@ -5,17 +5,6 @@ const body = document.querySelector('body');
     // }        
 // }
 
-
-
-
-
-
-
-
-
-
-
-
 // document.body.addEventListener('click', ()=>{
 
 //     var loginWindow = window.open("", "Login", "width = 500, height = 500, visible = none");
@@ -44,3 +33,27 @@ const body = document.querySelector('body');
 // })
 
 //if user scrolls "too much" or clicks on anything pop up the sign up or login window.
+
+const header = document.querySelector(".hero h2")
+
+const hero = document.querySelector('.hero');
+let background = hero.style.backgroundImage;
+
+const arrow = document.getElementById("right_arrow")
+
+const backgroundGone = [
+    {
+        transform: "translatex(-100%)"
+    }
+]
+
+console.log(background)
+const backgroundTiming = {
+    duration: 2000, 
+    iterations: 1,
+};
+
+arrow.addEventListener("click", ()=>{
+    header.animate(backgroundGone,backgroundTiming)
+})
+
