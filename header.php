@@ -19,10 +19,10 @@
         <div class = "bottom-header">
             <p>Newspaper.</p>
             <ul class = "text-nav">
-                <li><a href="home-page.html">Home page</a></li>
+                <li><a href="index.php">Home page</a></li>
                 <li><a href="simple-post.html">Simple post</a></li>
                 <li><a href="about_us.php">About us</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.php">Blog</a></li>
             </ul>
             <ul class = "icon-nav">
                 <li><a href="https://www.freepnglogos.com/pics/logo-ig-png" title="Image from freepnglogos.com"><img src="Icons/instagram_logo.png" width="24" alt="instagram logo" /></a></li>
