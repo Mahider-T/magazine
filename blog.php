@@ -45,6 +45,12 @@
         </aside>
         <main>
             <div id = "content_area">
+                <form id = "form">
+                    <label for = "write_post"> <h1>Write post here<h1></label>
+                    <textarea id = "write_post"></textarea><br><br>
+                    <input type = "submit" value="Post" id = "submit"><br><br>
+                    <input type = "file" id = "upload_file">
+                </form>
 
             </div>
         </main>
