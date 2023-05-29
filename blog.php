@@ -12,43 +12,46 @@
     <?php
         include('header.php')
     ?>
-    <aside id = "blog_aside">
-        <div id = "blog_aside_header">
-            <h1>Blogs</h1>
-        </div>
-        <div class = " blog_list blog1">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, mollitia.</p>
-        </div>
-        <div class = " blog_list blog1">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-        </div>
-        <div class = " blog_list blog1">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-        </div>
-        <div class = " blog_list blog1">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-        </div>
-        <div class = " blog_list blog1">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-        </div>
-        <div class = " blog_list blog1">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-        </div>
-        <div class = " blog_list blog1">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-        </div>
-        <div class = " blog_list blog1">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-        </div>
-    </aside>
+    <div id = "main_container">
+        <aside id = "blog_aside">
+            <div id = "blog_aside_header">
+                <h1>Blogs</h1>
+            </div>
+            <div class = "blog_list ">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, mollitia.</p>
+            </div>
+            <div class = "blog_list ">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+            </div>
+            <div class = "blog_list ">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+            </div>
+            <div class = "blog_list ">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+            </div>
+            <div class = "blog_list ">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+            </div>
+            <div class = "blog_list ">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+            </div>
+            
+        </aside>
+        <main>
+            <div id = "content_area">
+
+            </div>
+        </main>
+    </div>
+    <?php
+        include('footer.php') 
+    ?>
 
 </body>
 </html>
