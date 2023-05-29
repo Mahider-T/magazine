@@ -12,7 +12,7 @@
     <?php
         include('header.php')
     ?>
-    <div class = "hero">
+    <div class = "hero" id = "top_of_the_page">
         <img src = "Images/hero.jpg" width="100%" height="100%" id = "image1">
         <img src = "Images/image4.jpg" width="100%" height="100%" id = "image2">
         <div class = "overlay_elements">
