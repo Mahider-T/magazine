@@ -296,22 +296,27 @@ footer .footer_links{
 }
 
 /* From here to the bottom is a code for the blog page */
-
+#main_container {
+    display: flex;
+    background-color: gray;
+    margin-bottom: 10px;
+}
 #blog_aside {
     display: flex;
     flex-direction: column;
-    height: auto; /*could be 100vh tho or the same as the height of the writing box(text area)*/
+    box-sizing: border-box;
+    height: 90vh; /*could be 100vh tho or the same as the height of the writing box(text area)*/
     width: 20rem;
     margin-top: 100px;
-    border: 1px solid black;
+    margin-left: 10px;
+    border: 2px solid black;
     border-radius: 10px;
     gap: 20px;
     padding: 15px;
-    margin-left: 10px;
+    background-color: white;
 }
 
 #blog_aside_header{
-    height: fit-content;
     width: 100%;
     background-color: lightgray;
     color: black;
@@ -324,4 +329,19 @@ footer .footer_links{
 .blog_list {
     padding-bottom: 5px;
     border-bottom: 1px solid black;
+    flex-grow: 1;
+}
+
+#content_area {
+    display: flex;
+    box-sizing: border-box;
+    width: 70vw;
+    height: 90vh;
+    /* margin-top: 100px;
+    margin-left: 10px; */
+    margin: 100px 10px 0px 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: white;
+    
 }
