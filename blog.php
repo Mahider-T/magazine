@@ -17,29 +17,35 @@
             <div id = "blog_aside_header">
                 <h1>Blogs</h1>
             </div>
-            <div class = "blog_list ">
+            <div class = "blog_list">
                 <h1>Title</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, mollitia.</p>
+                <button class="read_more">Read more</button>
             </div>
             <div class = "blog_list ">
                 <h1>Title</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+                <button class="read_more">Read more</button>
             </div>
             <div class = "blog_list ">
                 <h1>Title</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+                <button class="read_more">Read more</button>
             </div>
             <div class = "blog_list ">
                 <h1>Title</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+                <button class="read_more">Read more</button>
             </div>
             <div class = "blog_list ">
                 <h1>Title</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+                <button class="read_more">Read more</button>
             </div>
             <div class = "blog_list ">
                 <h1>Title</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
+                <button class="read_more">Read more</button>
             </div>
             
         </aside>
