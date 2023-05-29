@@ -41,7 +41,9 @@
 header{
     position: fixed;
     width: 100%;
-    margin-top: 0px;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 30px;
     z-index: 9999;
 }
 
@@ -291,4 +293,35 @@ footer .footer_links{
 .group_members sub{
     width: 100%;
     text-align: center;
+}
+
+/* From here to the bottom is a code for the blog page */
+
+#blog_aside {
+    display: flex;
+    flex-direction: column;
+    height: auto; /*could be 100vh tho or the same as the height of the writing box(text area)*/
+    width: 20rem;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    gap: 20px;
+    padding: 15px;
+    margin-left: 10px;
+}
+
+#blog_aside_header{
+    height: fit-content;
+    width: 100%;
+    background-color: lightgray;
+    color: black;
+    font-family:'Nanum Myeongjo', serif;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog_list {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
 }
