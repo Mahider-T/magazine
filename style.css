@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nanum+Myeongjo&family=Shadows+Into+Light&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-.top-header a{
+
+.top-header a {
     text-decoration: none;
     color: white;
 }
-.top-header{
+
+.top-header {
     height: 2rem;
     display: flex;
     background-color: black;
@@ -20,11 +22,13 @@
     font-size: 14px;
     font-family: 'Libre Baskerville', serif;
 }
-.top-header ul{
+
+.top-header ul {
     list-style-type: none;
     display: flex;
     gap: 2rem;
 }
+
 .bottom-header {
     display: flex;
     height: 4rem;
@@ -38,7 +42,8 @@
     font-size: 20px;
 
 }
-header{
+
+header {
     position: fixed;
     width: 100%;
     top: 0px;
@@ -47,25 +52,27 @@ header{
     z-index: 9999;
 }
 
-header ul{
+header ul {
     display: flex;
-    list-style-type: none; 
+    list-style-type: none;
     gap: 2rem;
 }
-header .icon-nav{
-    gap: 20px;
-} 
 
-.bottom-header a{
+header .icon-nav {
+    gap: 20px;
+}
+
+.bottom-header a {
     text-decoration: none;
     color: black
 }
-.bottom-header p{
+
+.bottom-header p {
     font-weight: 500px;
     font-size: xx-large;
 }
 
-.hero{
+.hero {
     height: 450px;
     position: relative;
     /* border: solid red 5px;
@@ -75,9 +82,9 @@ header .icon-nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 30px 0 30px; */
-} 
+}
 
-.overlay_elements{
+.overlay_elements {
     display: flex;
     justify-content: space-around;
     position: absolute;
@@ -85,15 +92,16 @@ header .icon-nav{
     left: 0;
     width: 100%;
     height: 50%;
-    z-index: 9998;   
+    z-index: 9998;
 }
-.hero #image2{
+
+.hero #image2 {
     /* position: absolute; */
     transform: translate(100%, -101%);
     display: none;
 }
 
-.hero-text{
+.hero-text {
     color: white;
 }
 
@@ -104,24 +112,26 @@ main .container {
     /* flex-shrink: 1; */
     height: auto;
     width: auto;
-    margin: 3rem 10vw 3rem 10vw;   
+    margin: 3rem 10vw 3rem 10vw;
     box-sizing: border-box;
     /* border: 2px solid rgb(18, 0, 0); */
 }
 
-.divider{
+.divider {
     /* background-color: green; */
     width: 23.33%;
     /* min-width: 100px; */
     height: 100%;
     padding: 5%;
 }
-.container .divider_two{
+
+.container .divider_two {
     /* background-color: yellow; */
     border-left: 2px solid black;
     border-right: 2px solid black;
-    
+
 }
+
 /* .container .divider_three{
      background-color: red 
 } */
@@ -130,38 +140,45 @@ main .container {
     object-fit: cover;
 }
 
-footer{
+footer {
     height: auto;
     width: 100%;
     background-color: black;
     color: white
 }
-hr{
-    color:white;
+
+hr {
+    color: white;
 }
+
 footer .title {
     display: flex;
     justify-content: space-around;
     padding: 70px 50px 0px 50px;
     font-size: xx-large;
 }
-footer .footer_links{
+
+footer .footer_links {
     width: 300px;
 }
+
 footer .father_container {
     display: flex;
     justify-content: space-around;
     padding: 40px 50px 30px 50px;
-    gap:30px;
+    gap: 30px;
 }
-footer ul{
+
+footer ul {
     list-style-type: none;
 }
-footer a{
+
+footer a {
     text-decoration: none;
     color: white;
 }
-footer .footer_links{
+
+footer .footer_links {
     display: flex;
     justify-content: center;
     font-family: 'Nanum Myeongjo', serif;
@@ -169,22 +186,22 @@ footer .footer_links{
     font-size: 20px;
 }
 
-.father_container li{
-    margin-bottom: 10px ;
+.father_container li {
+    margin-bottom: 10px;
 }
 
 
 /* Below here is a styling for the about us page */
-.about_us{
-    margin: 50px 15vw 3rem 15vw; 
+.about_us {
+    margin: 50px 15vw 3rem 15vw;
     /* border: 2px solid black; */
     display: flex;
     flex-wrap: wrap;
     /* min-width: 900px; */
-    
+
 }
 
-.about_us .about_header{
+.about_us .about_header {
     text-align: center;
     width: 100%;
     font-family: 'Nanum Myeongjo', serif;
@@ -194,7 +211,7 @@ footer .footer_links{
 
 }
 
-.about_us .about1{
+.about_us .about1 {
     box-sizing: border-box;
     /* border: 1px solid red; */
     height: 100%;
@@ -205,7 +222,7 @@ footer .footer_links{
     align-items: center;
 }
 
-.about_us .about2{
+.about_us .about2 {
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -221,13 +238,13 @@ footer .footer_links{
     /* margin: 10px 0 10px 0; */
 }
 
-.first_row.right{
+.first_row.right {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bottom_beauty{
+.bottom_beauty {
     margin-top: 40px;
     width: 100%;
     height: 300px;
@@ -237,36 +254,40 @@ footer .footer_links{
     margin-top: -50px;
     z-index: -9999;
 }
-.bb_child{
+
+.bb_child {
     margin-top: 4rem;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-.bb_child_right{
-    background-color: rgba(202, 192, 192, 0.1) ;
+
+.bb_child_right {
+    background-color: rgba(202, 192, 192, 0.1);
     margin-right: 1rem;
     margin-bottom: 1rem;
     margin-left: 1rem;
-    
+
 }
 
-.about1.right.fourth_row{
+.about1.right.fourth_row {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.about1.right.fourth_row h1{
+
+.about1.right.fourth_row h1 {
     font-weight: 900;
     font-size: 200px;
 }
-.about1.left.fourth_row{
+
+.about1.left.fourth_row {
     padding: 0px;
 }
 
-.group_members{
+.group_members {
     width: 100%;
     height: 200px;
     margin-top: 50px;
@@ -274,7 +295,8 @@ footer .footer_links{
     box-sizing: border-box;
     display: flex;
 }
-.member_list{
+
+.member_list {
     /* border: 1px solid red; */
     height: 100%;
     flex: 1 1 0px;
@@ -283,14 +305,15 @@ footer .footer_links{
     justify-content: center;
     align-items: center;
 }
-.author{
+
+.author {
     border-radius: 50%;
     width: 70%;
     height: 70%;
     object-fit: cover;
 }
 
-.group_members sub{
+.group_members sub {
     width: 100%;
     text-align: center;
 }
@@ -300,13 +323,15 @@ footer .footer_links{
     display: flex;
     /* justify-content: space-between; */
     background-color: gray;
-    margin-bottom: 1px; 
+    margin-bottom: 1px;
 }
+
 #blog_aside {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    height: 90vh; /*could be 100vh tho or the same as the height of the writing box(text area)*/
+    height: 90vh;
+    /*could be 100vh tho or the same as the height of the writing box(text area)*/
     width: 20vw;
     margin-top: 100px;
     margin-left: 10px;
@@ -318,16 +343,17 @@ footer .footer_links{
     background-color: white;
 }
 
-#blog_aside_header{
+#blog_aside_header {
     width: 100%;
     background-color: lightgray;
     color: black;
-    font-family:'Nanum Myeongjo', serif;
+    font-family: 'Nanum Myeongjo', serif;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .blog_list {
     padding-bottom: 1px;
     border-bottom: 1px solid black;
@@ -335,19 +361,22 @@ footer .footer_links{
     flex-wrap: wrap;
     flex-grow: 1;
 }
+
 .blog_list p {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-     overflow: hidden;
-     width: 100%;
-     margin-bottom: 5px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 5px;
 }
-.blog_list h1{
+
+.blog_list h1 {
     width: 100%;
     margin-bottom: 0px;
 }
-.blog_list .read_more{
+
+.blog_list .read_more {
     margin-top: 9px;
 }
 
@@ -361,8 +390,9 @@ footer .footer_links{
     border: 2px solid black;
     background-color: white;
     padding: 10px;
-    
+
 }
+
 #form textarea {
     height: 600px;
     width: 70vw;
@@ -372,7 +402,7 @@ footer .footer_links{
     box-sizing: border-box;
 }
 
-.form .form_elements{
+.form .form_elements {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -380,8 +410,10 @@ footer .footer_links{
     gap: auto;
 
 }
-#form #submit{
-    background-color: lightgray; /* Green */
+
+#form #submit {
+    background-color: lightgray;
+    /* Green */
     border: 2px solid black;
     color: black;
     padding: 10px 20px;
@@ -392,7 +424,7 @@ footer .footer_links{
     border-radius: 8px;
 }
 
-#form #upload_file{
+#form #upload_file {
     /* background-color: lightgray;  */
     /* border: 2px solid black; */
     color: black;
@@ -403,4 +435,8 @@ footer .footer_links{
     font-size: 20px;
 }
 
-
+/* @media screen and (max-width: 1106px){
+    .about_us{
+        margin: 50px 10vw 3rem 10vw;
+    }
+}  */
