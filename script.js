@@ -51,7 +51,7 @@ const toTheLeft1Timing = {
     iterations: 1,
 };
 const toTheLeft2Timing = {
-    duration: 699, 
+    duration: 690, 
     iterations: 1,
 };
 
