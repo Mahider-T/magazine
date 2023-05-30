@@ -13,17 +13,16 @@
         include('header.php')
     ?>
     <div class = "hero" id = "top_of_the_page">
-        <img src = "Images/hero.jpg" width="100%" height="100%" id = "image1">
-        <img src = "Images/image4.jpg" width="100%" height="100%" id = "image2">
+        <img src = "Images/image2.jpg" width="100%" height="100%" id = "image1" style="object-fit:cover">
         <div class = "overlay_elements">
-            <div ><img src = "Icons/left_circle_arrow.svg" id = "left_arrow" width="50px" height="50px "></div>
+            <!-- <div ><img src = "Icons/left_circle_arrow.svg" id = "left_arrow" width="50px" height="50px "></div> -->
             <div class="hero-text">
                 <h2 >What is this garbage?</h2><br>
                 <p >Lorem ipsum dolor sit, amet consectetur adipisicing<br> 
                     elit. Eos, numquam iure. Possimus perspiciatis quas 
                     officiis.</p>
             </div>
-            <div><img src = "Icons/right_circle_arrow.svg " id = "right_arrow" width="50px" height="50px"></div>
+            <!-- <div><img src = "Icons/right_circle_arrow.svg " id = "right_arrow" width="50px" height="50px"></div> -->
         </div>
     </div>
     <main>
