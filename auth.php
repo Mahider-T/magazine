@@ -111,7 +111,7 @@
         </div>
        
         <footer>
-            <p>Don't have an account? <a href=""><strong>Sign up<strong</a></p>
+            <p>Don't have an account? <a href="signup.php"><strong>Sign up<strong</a></p>
         </footer>
 
         </div>
