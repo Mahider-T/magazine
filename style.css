@@ -465,7 +465,7 @@ footer .footer_links {
 }
 
 #simple_post_container_aside{
-    height: 100%;
+    height: auto;
     width: 30%;
     /* border: 2px solid yellow; */
     display: flex;
@@ -479,13 +479,15 @@ footer .footer_links {
     width: 80%;
     padding: 1rem;
     padding-top:3rem;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     
 
 }
 .aside_list p{
     display: inline;
-
-
 }
 .aside_list_button{
     /* display: inline; */
@@ -497,13 +499,14 @@ footer .footer_links {
     box-sizing: border-box;
     flex-grow: 1;
     max-height: 500px;
-    max-width: 500px;
+    max-width: 100%;
 }
 #simple_post_text{
     /* border: 2px dotted rgb(128, 0, 0); */
     box-sizing: border-box;
     flex-grow: 2;
     min-width: 100%;
-    padding: 10px;
+    /* padding: 10px;*/
+    padding-top: 50px;
     text-align: justify;
 }  
