@@ -14,6 +14,7 @@
         }
         .auth_page{
             display: flex;
+            margin-top: 100px;
 
         }
         .right{
@@ -32,34 +33,45 @@
         .left{
             display: flex;
             flex-direction: column;
-            /* align-items: center;
-            justify-content: center; */
             min-width: 50vw;
             height: 100vh;
             border: 2px solid black;
             box-sizing: border-box;
             margin: 5px;
+            padding: 30px;
+            justify-content: space-between;
         }
         .left div{
             width: 100%;
             display: flex;
             justify-content: center;
-            gap:0px
+        }
+        .left .icon{
+            margin-bottom: -50px;
         }
     </style>
 </head>
 <body>
+    <?php
+        include('header.php')
+    ?>
     
     <div class = "auth_page">
         <div class="left">
+
+
             <div class = "icon"><img src ="Icons/logo.svg" width="80px" height="80px"></div>
             <div class="header"><h1>Welcome</h1></div>
+
+
             <div class = "form">
                 <form action="" method = "" name = "">
                     <label for="username">Username</label><br>
                     <input name = "username" id = "username" type = "text"><br><br>
                     <label for="password">Password</label><br>
                     <input name = "password" id = "password" type = "password"><br><br>
+                    <label for="repear">Repeat password</label><br>
+                    <input name = "repeat" id = "repeat" type = "password"><br><br>
                     <input type="submit" id = "login" value="Register">
                 </form>
             </div>
