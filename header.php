@@ -20,7 +20,7 @@
             <p>Newspaper.</p>
             <ul class = "text-nav">
                 <li><a href="index.php">Home page</a></li>
-                <li><a href="simple-post.html">Simple post</a></li>
+                <li><a href="simple_post.php">Simple post</a></li>
                 <li><a href="about_us.php">About us</a></li>
                 <li><a href="blog.php">Blog</a></li>
             </ul>
