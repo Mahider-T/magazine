@@ -34,31 +34,19 @@ const body = document.querySelector('body');
 
 //if user scrolls "too much" or clicks on anything pop up the sign up or login window.
 
-
-const heroImage1 = document.querySelector('.hero #image1');
-const heroImage2 = document.querySelector('.hero #image2')
-
-const arrow = document.getElementById("right_arrow")
-
-const toTheLeft1 = [
+const heroImage = document.querySelector('.hero img');
+const photos = ['Images/image2.jpg','Images/image3.jpg','Images/image4.jpg']
+function changeHeaderImage(){
+    let index = 0;
+    
+    function changeImage()
     {
-        transform: "translatex(-100%)"
+        heroImage.src = photos[index];
+        (index > 1)? index = 0: index++; 
     }
-]
+    window.onload = () => {
+        setInterval(changeImage,2500)
+    } 
+}
 
-const toTheLeft1Timing = {
-    duration: 700, 
-    iterations: 1,
-};
-const toTheLeft2Timing = {
-    duration: 690, 
-    iterations: 1,
-};
-
-
-arrow.addEventListener("click", ()=>{
-    heroImage1.animate(toTheLeft1,toTheLeft1Timing)
-    heroImage2.animate(toTheLeft1,toTheLeft2Timing)
-    heroImage2.style.display = "block";
-})
-
+changeHeaderImage();
