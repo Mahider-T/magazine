@@ -133,6 +133,11 @@ main .container {
 
 }
 
+.each_article{
+    padding: 20px 0px 20px 0px;
+    border-bottom: 2px solid black;
+}
+
 /* .container .divider_three{
      background-color: red 
 } */
