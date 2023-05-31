@@ -126,7 +126,7 @@ main .container {
     padding: 5%;
 }
 
-.container .divider_two {
+.container #divider_two {
     /* background-color: yellow; */
     border-left: 2px solid black;
     border-right: 2px solid black;
