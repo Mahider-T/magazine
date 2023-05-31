@@ -89,7 +89,8 @@
 </head>
 <body>
     <?php
-        include('header.php')
+        include('header.php');
+        echo "new change";
     ?>
     
     <div class = "auth_page">
