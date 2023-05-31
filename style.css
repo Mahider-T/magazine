@@ -198,6 +198,16 @@ footer .footer_links {
 
 
 /* Below here is a styling for the about us page */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-in.in-view {
+    opacity: 1;
+  }
+  
 .about_us {
     margin: 50px 15vw 3rem 15vw;
     /* border: 2px solid black; */
