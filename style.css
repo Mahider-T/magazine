@@ -126,11 +126,16 @@ main .container {
     padding: 5%;
 }
 
-.container .divider_two {
+.container #divider_two {
     /* background-color: yellow; */
     border-left: 2px solid black;
     border-right: 2px solid black;
 
+}
+
+.each_article{
+    padding: 20px 0px 20px 0px;
+    border-bottom: 2px solid black;
 }
 
 /* .container .divider_three{
@@ -193,6 +198,16 @@ footer .footer_links {
 
 
 /* Below here is a styling for the about us page */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-in.in-view {
+    opacity: 1;
+  }
+  
 .about_us {
     margin: 50px 15vw 3rem 15vw;
     /* border: 2px solid black; */
@@ -289,8 +304,8 @@ footer .footer_links {
 }
 
 .group_members {
-    width: 100%;
-    height: 200px;
+    width: fit-content;
+    height: fit-content;
     margin-top: 50px;
     /* border: 1px solid black; */
     box-sizing: border-box;
@@ -299,7 +314,7 @@ footer .footer_links {
 
 .member_list {
     /* border: 1px solid red; */
-    height: 100%;
+    height: 200px;
     flex: 1 1 0px;
     display: flex;
     flex-wrap: wrap;

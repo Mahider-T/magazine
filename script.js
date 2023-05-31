@@ -48,5 +48,15 @@ function changeHeaderImage(){
         setInterval(changeImage,2500)
     } 
 }
-
 changeHeaderImage();
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  });
+  
+  observer.observe(document.querySelectorAll('.fade-in'));
+  
