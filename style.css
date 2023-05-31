@@ -501,13 +501,17 @@ footer .footer_links {
     max-height: 500px;
     max-width: 100%;
 }
+#simple_post_image img{
+    max-height: 500px;
+    width: 100%;
+}
 #simple_post_text{
     /* border: 2px dotted rgb(128, 0, 0); */
     box-sizing: border-box;
-    flex-grow: 2;
+    flex-grow: 1;
     min-width: 100%;
     /* padding: 10px;*/
-    padding-top: 50px;
+    padding-top: 100px;
     text-align: justify;
 }
 
