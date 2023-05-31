@@ -57,27 +57,27 @@
 
         <div class = "group_members">
             <div class = "member_list">
-                <img src = "Images/dt.png" width="80%" height="50%" class="author">
+                <img src = "Images/dt.png" width="100px" height="100px" class="author">
                 <sub>Donald Trummp</sub>
                 <sub>Edtior</sub>
             </div>
             <div class = "member_list">
-                <img src = "Images/dt.png" width="80%" height="50%" class="author">
+                <img src = "Images/dt.png" width="80%" height="80%" class="author">
                 <sub>Donald Trummp</sub>
                 <sub>Edtior</sub>
             </div>
             <div class = "member_list">
-                <img src = "Images/dt.png" width="80%" height="50%" class="author">
+                <img src = "Images/dt.png" width="80%" height="80%" class="author">
                 <sub>Donald Trummp</sub>
                 <sub>Edtior</sub>
             </div>
             <div class = "member_list">
-                <img src = "Images/dt.png" width="80%" height="50%" class="author">
+                <img src = "Images/dt.png" width="80%" height="80%" class="author">
                 <sub>Donald Trummp</sub>
                 <sub>Edtior</sub>
             </div>
             <div class = "member_list">
-                <img src = "Images/dt.png" width="80%" height="50%" class="author">
+                <img src = "Images/dt.png" width="80%" height="80%" class="author">
                 <sub>Donald Trummp</sub>
                 <sub>Edtior</sub>
             </div>
