@@ -40,12 +40,34 @@
                         Deserunt quod eaque sit iusto doloribus distinctio 
                         laborum, accusamus natus esse, mollitia suscipit maxime.</p>
                 </div>
+                <div class = "each_article" id = "article12">
+                    <h1>Who killed Jefferey?</h1><br>
+                    <img src="Images/dt.png" width="100px" height="100px" class = "writer"><br>
+                    <sub style="color:gray">Donald Trump</sub>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Maiores nobis atque debitis rem asperiores eveniet provident 
+                            tempora eaque laudantium nisi voluptatibus assumenda incidunt 
+                            dolorem fuga, omnis sit dolor reiciendis expedita sapiente facilis accusamus error iusto odio. 
+                            Deserunt quod eaque sit iusto doloribus distinctio 
+                            laborum, accusamus natus esse, mollitia suscipit maxime.</p>
+                </div>
             </div>
             <div class = "divider " id = "divider_two">
                 <div class = "each_article" id = "article21">
                     <h1>Who killed Jefferey?</h1><br>
                     <img src="Images/mia.jpg" width="100px" height="100px" class = "writer"><br>
                     <sub style="color:gray">Mia Khalifa</sub>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Maiores nobis atque debitis rem asperiores eveniet provident 
+                            tempora eaque laudantium nisi voluptatibus assumenda incidunt 
+                            dolorem fuga, omnis sit dolor reiciendis expedita sapiente facilis accusamus error iusto odio. 
+                            Deserunt quod eaque sit iusto doloribus distinctio 
+                            laborum, accusamus natus esse, mollitia suscipit maxime.</p>
+                </div>
+                <div class = "each_article" id = "article22">
+                    <h1>Who killed Jefferey?</h1><br>
+                    <img src="Images/dt.png" width="100px" height="100px" class = "writer"><br>
+                    <sub style="color:gray">Donald Trump</sub>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Maiores nobis atque debitis rem asperiores eveniet provident 
                             tempora eaque laudantium nisi voluptatibus assumenda incidunt 
