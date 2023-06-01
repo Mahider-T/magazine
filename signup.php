@@ -132,8 +132,8 @@
                         $repeatPassword = $_POST['repeat'];
 
                     // Validate username
-                    if (!preg_match('/^[a-zA-Z0-9]+$/', $username)) {
-                        $message = "Invalid username. Username must contain only alphanumeric characters.<br>";
+                    if (!preg_match('/[a-zA-Z]/', $username)) {
+                        $message = "Invalid username. Username must contain alphabets.<br>";
                     }
                     // validate password
                     else if (strlen($password) < 8 || strlen($password) > 16 || !preg_match('/[a-zA-Z]/', $password) || !preg_match('/[0-9]/', $password)) {
