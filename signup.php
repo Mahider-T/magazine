@@ -81,6 +81,10 @@
             width: 100%;
             background-color: lightgray;
         }
+        #division_one h1{
+            font-family:cursive;
+        }
+        /*css added by Sifen*/
         #submit_replyE{
             color: red;
             font-size: 19px;
@@ -89,9 +93,14 @@
             color: green;
             font-size: 19px;
         }
-        #division_one h1{
-            font-family:cursive;
+        #login2{ 
+            height: 45px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            margin: 0px 20px;
         }
+
 
     </style>
 </head>
@@ -126,7 +135,6 @@
             <?php
                 if ($_SERVER['REQUEST_METHOD'] === 'POST'){//check if form is submitted
                     // Retrieve form data
-                        $submitFlag = true;
                         $username = $_POST['username'];
                         $password = $_POST['password'];
                         $repeatPassword = $_POST['repeat'];
@@ -159,9 +167,9 @@
             
                             $sqluser = "SELECT username FROM user_information WHERE username = '$username'";
                             $qresult=mysqli_query($connection, $sqluser);
-                            $counts=mysqli_num_rows($qresult);
+                            $count=mysqli_num_rows($qresult);
 
-                            if($counts > 0)
+                            if($count > 0)
                             {
                                 echo"<div id=\"submit_replyE\">Username is already taken</div>";
                             }
@@ -178,7 +186,13 @@
                                     form.style.color = \"green\";
                                     form.innerHTML = \"Sign up successful!\";
                                     </script>
-                                    <button id = ><a>Login</a></button>";
+                                    <button id = \"login2\" >Login</button>
+                                    <script type=\"text/javascript\">
+                                    document.getElementById(\"login2\").onclick = function(){
+                                        window.location.href = \"auth.php\"
+                                    }
+                                    </script>  
+                                    ";
                                 }
                             }
                     }

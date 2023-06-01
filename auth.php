@@ -81,6 +81,11 @@
             align-items: center;
             justify-content: center;
         }
+        /*css added by Sifen*/
+        #submit_reply{
+            color: red;
+            font-size: 19px;
+        }
 
         
     </style>
@@ -94,16 +99,47 @@
 
         <div class = "welcome"><h1>Welcome back</h1></div>
         <div class = "form">
-            <form action="" method = "" name = "">
+            <form action="auth.php" method = "post" name = "">
                 <label for="username">Username</label><br>
-                <input name = "username" id = "username" type = "text"><br><br>
+                <input name = "username" id = "username" type = "text" required><br><br>
                 <label for="password">Password</label><br>
-                <input name = "password" id = "password" type = "password"><br><br>
+                <input name = "password" id = "password" type = "password" required><br><br>
+                <!--php code to handle the form submission-->
+                <?php
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST'){//check if form is submitted
+                        // Retrieve form data
+                            $username = $_POST['username'];
+                            $password = $_POST['password'];
+                        
+                        //connect to the database
+                            $host = "localhost";
+                            $user = "root";
+                            $pass = "";
+                            $db = "uni_mag";
+
+                            $connection = new mysqli($host, $user, $pass, $db) or die("unable to connect");
+                        //check if user record exists    
+                            $sqluser = "SELECT * FROM user_information WHERE username = '$username' AND password = '$password'";
+                            $qresult=mysqli_query($connection, $sqluser);
+                            $count=mysqli_num_rows($qresult);
+
+                            if($count > 0)
+                            {
+                                echo"<script type=\"text/javascript\">
+                                    window.location.href = \"index.php\"
+                                    alert
+                                </script>";
+                            }
+                            else{
+                                echo"<div id=\"submit_reply\">Record not found, please try again.</div>";
+                            }
+                    }
+                ?>
                 <div class="low">
                     <div class = "checkbox_and_label">
                     <input type="checkbox" id = "remember">
                     <label for = "remember">Remember me</label>
-            </div>
+                </div>
                 <a href="">Forgot Password?</a>
             </div>
                 <input type="submit" id = "login" value="Login">
