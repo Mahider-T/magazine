@@ -164,30 +164,30 @@
                             if($counts > 0)
                             {
                                 echo"<div id=\"submit_replyE\">Username is already taken</div>";
-                                echo"<div> </div>";
                             }
+                            else{
+                                //Insert data into the database
+                                $sql = "INSERT INTO user_information (username, password)
+                                VALUES ('$username', '$password')";
 
-                        //Insert data into the database
-                            $sql = "INSERT INTO user_information (username, password)
-                                    VALUES ('$username', '$password')";
-                            //check if insertion was a success 
-                            if ($connection->query($sql) === TRUE) {
-                                echo"<script type=\"text/javascript\">
-                                let form = document.getElementById(\"signup\");
-                                form.style.fontSize = \"x-large\";
-                                form.style.color = \"green\";
-                                form.innerHTML = \"Sign up successful!\";
-                                </script>
-                                <button id = ><a>Login</a></button>";
+                                //check if insertion was a success 
+                                if ($connection->query($sql) === TRUE) {
+                                    echo"<script type=\"text/javascript\">
+                                    let form = document.getElementById(\"signup\");
+                                    form.style.fontSize = \"x-large\";
+                                    form.style.color = \"green\";
+                                    form.innerHTML = \"Sign up successful!\";
+                                    </script>
+                                    <button id = ><a>Login</a></button>";
+                                }
                             }
                     }
                 } 
             ?>
-            <div><!--I have removed the id = "division three" from mahider's draft-->
+            <div id = "division_three">
             </div>
         </div>
-        <!--php form data handling -->
-     <div class = "right">
+        <div class = "right">
             <img src="Images/image6.jpg" width="100%" height="100%"  class="side_image">
         </div>
     </div>
