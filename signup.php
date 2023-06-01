@@ -81,6 +81,14 @@
             width: 100%;
             background-color: lightgray;
         }
+        #submit_replyE{
+            color: red;
+            font-size: 19px;
+        } 
+        #submit_replyS{
+            color: green;
+            font-size: 19px;
+        }
         #division_one h1{
             font-family:cursive;
         }
@@ -88,37 +96,100 @@
     </style>
 </head>
 <body>
+    <!--adding header php file-->
     <?php
         include('header.php');
-        echo "new change";
     ?>
-    
     <div class = "auth_page">
+        <!--the sign up form section-->
         <div class="left">
             <div id = "division_one">
                 <div class = "icon"><img src ="Icons/logo.svg" width="80px" height="80px"></div>
                 <div class="header"><h1>Welcome</h1></div>
             </div>
-
+            <!--The signup form -->
             <div id = "division_two">
-                <form action="" method = "" name = "">
+                <form action="signup.php" method = "post" id = "signup">
                     <label for="username">Username</label><br>
-                    <input name = "username" id = "username" type = "text" class="box"><br><br>
+                    <input name = "username" id = "username" type = "text" class="box" required><br><br>
+
                     <label for="password">Password</label><br>
-                    <input name = "password" id = "password" type = "password" class="box"><br><br>
+                    <input name = "password" id = "password" type = "password" class="box" required><br><br>
+
                     <label for="repeat">Repeat password</label><br>
-                    <input name = "repeat" id = "repeat" type = "password" class="box"><br><br>
+                    <input name = "repeat" id = "repeat" type = "password" class="box" required><br><br>
+
                     <input type="submit" id = "login" value="Register">
                 </form>
             </div>
-            <div id = "division_three">
+            <!--php form validation-->
+            <?php
+                if ($_SERVER['REQUEST_METHOD'] === 'POST'){//check if form is submitted
+                    // Retrieve form data
+                        $submitFlag = true;
+                        $username = $_POST['username'];
+                        $password = $_POST['password'];
+                        $repeatPassword = $_POST['repeat'];
 
+                    // Validate username
+                    if (!preg_match('/^[a-zA-Z0-9]+$/', $username)) {
+                        $message = "Invalid username. Username must contain only alphanumeric characters.<br>";
+                    }
+                    // validate password
+                    else if (strlen($password) < 8 || strlen($password) > 16 || !preg_match('/[a-zA-Z]/', $password) || !preg_match('/[0-9]/', $password)) {
+                        $message = "Invalid password. Password must be 8 to 16 characters long and include both letters and numbers.<br>";
+                    }
+                    // validate password repeat
+                    else if ($password !== $repeatPassword) {
+                        $message = "Password and repeat password do not match.<br>";            
+                    }
+                    //check sign up success($message is not set to any error message) and reply to the user
+                    if(isset($message)){
+                        echo"<div id=\"submit_replyE\">{$message}</div>";
+                    }
+                    else{
+                        //connect to the database
+                        $host = "localhost";
+                        $user = "root";
+                        $pass = "";
+                        $db = "uni_mag";
+
+                        $connection = new mysqli($host, $user, $pass, $db) or die("unable to connect");
+                        //check for duplicated usernames
+            
+                            $sqluser = "SELECT username FROM user_information WHERE username = '$username'";
+                            $qresult=mysqli_query($connection, $sqluser);
+                            $counts=mysqli_num_rows($qresult);
+
+                            if($counts > 0)
+                            {
+                                echo"<div id=\"submit_replyE\">Username is already taken</div>";
+                                echo"<div> </div>";
+                            }
+
+                        //Insert data into the database
+                            $sql = "INSERT INTO user_information (username, password)
+                                    VALUES ('$username', '$password')";
+                            //check if insertion was a success 
+                            if ($connection->query($sql) === TRUE) {
+                                echo"<script type=\"text/javascript\">
+                                let form = document.getElementById(\"signup\");
+                                form.style.fontSize = \"x-large\";
+                                form.style.color = \"green\";
+                                form.innerHTML = \"Sign up successful!\";
+                                </script>
+                                <button id = ><a>Login</a></button>";
+                            }
+                    }
+                } 
+            ?>
+            <div><!--I have removed the id = "division three" from mahider's draft-->
             </div>
         </div>
-        <div class = "right">
+        <!--php form data handling -->
+     <div class = "right">
             <img src="Images/image6.jpg" width="100%" height="100%"  class="side_image">
         </div>
     </div>
-    
 </body>
 </html>
