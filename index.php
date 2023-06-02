@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php
-        include('header.php')
+        include('header.php');
     ?>
     <div class = "hero" id = "top_of_the_page">
         <img src = "Images/image2.jpg" width="100%" height="100%" id = "image1" style="object-fit:cover">

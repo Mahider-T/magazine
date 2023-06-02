@@ -1,3 +1,6 @@
+<?php
+    session_start();    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,7 +115,7 @@
                             $password = $_POST['password'];
                         
                         //connect to the database
-                            $host = "127.0.0.1";
+                            $host = "localhost";
                             $user = "root";
                             $pass = "";
                             $db = "uni_mag";
@@ -120,33 +123,34 @@
                             $connection = new mysqli($host, $user, $pass, $db) or die("unable to connect");
                     
                         //check if record exists as an author                            
-                            // $sqlauthor = "SELECT * FROM author_information WHERE username = '$username' AND password = '$password'";
-                            // $qresult1=mysqli_query($connection, $sqlauthor);
-                            // $count1=mysqli_num_rows($qresult1);
+                            $sqlauthor = "SELECT * FROM author_information WHERE username = '$username' AND password = '$password'";
+                            $qresult1=mysqli_query($connection, $sqlauthor);
+                            $count1=mysqli_num_rows($qresult1);
 
-                            // if($count1 > 0)
-                            // {
-                            //     echo"<script type=\"text/javascript\">
-                            //         window.location.href = \"index.php\"
-                            //         alert
-                            //     </script>";
-                            // }
-                            // else 
-
-                       //check if record exists as a user    
-                            $sqluser = "SELECT * FROM user_information WHERE username = '$username' AND password = '$password'";
-                            $qresult=mysqli_query($connection, $sqluser);
-                            $count=mysqli_num_rows($qresult);
-
-                            if($count > 0)
+                            if($count1 > 0)
                             {
+                                $_SESSION["blog"] = false;
                                 echo"<script type=\"text/javascript\">
-                                    window.location.href = \"index.php\"
-                                    alert
+                                    window.location.href = \"index.php\";
                                 </script>";
                             }
                             else{
-                                echo"<div id=\"submit_reply\">Record not found, please try again.</div>";
+                            //check if record exists as a user    
+                                $sqluser = "SELECT * FROM user_information WHERE username = '$username' AND password = '$password'";
+                                $qresult=mysqli_query($connection, $sqluser);
+                                $count=mysqli_num_rows($qresult);
+
+                                if($count > 0)
+                                {   
+                                    $_SESSION["blog"] = true;
+
+                                    echo"<script type=\"text/javascript\">
+                                    window.location.href = \"index.php\";
+                                    </script>";
+                                }
+                                else{
+                                    echo"<div id=\"submit_reply\">Record not found, please try again.</div>";
+                                }
                             }
                     }
                 ?>
