@@ -112,13 +112,28 @@
                             $password = $_POST['password'];
                         
                         //connect to the database
-                            $host = "localhost";
+                            $host = "127.0.0.1";
                             $user = "root";
                             $pass = "";
                             $db = "uni_mag";
 
                             $connection = new mysqli($host, $user, $pass, $db) or die("unable to connect");
-                        //check if user record exists    
+                    
+                        //check if record exists as an author                            
+                            // $sqlauthor = "SELECT * FROM author_information WHERE username = '$username' AND password = '$password'";
+                            // $qresult1=mysqli_query($connection, $sqlauthor);
+                            // $count1=mysqli_num_rows($qresult1);
+
+                            // if($count1 > 0)
+                            // {
+                            //     echo"<script type=\"text/javascript\">
+                            //         window.location.href = \"index.php\"
+                            //         alert
+                            //     </script>";
+                            // }
+                            // else 
+
+                       //check if record exists as a user    
                             $sqluser = "SELECT * FROM user_information WHERE username = '$username' AND password = '$password'";
                             $qresult=mysqli_query($connection, $sqluser);
                             $count=mysqli_num_rows($qresult);
