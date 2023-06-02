@@ -130,9 +130,7 @@
                             if($count1 > 0)
                             {
                                 $_SESSION["blog"] = false;
-                                echo"<script type=\"text/javascript\">
-                                    window.location.href = \"index.php\";
-                                </script>";
+                                header("location: index.php");
                             }
                             else{
                             //check if record exists as a user    
@@ -144,9 +142,7 @@
                                 {   
                                     $_SESSION["blog"] = true;
 
-                                    echo"<script type=\"text/javascript\">
-                                    window.location.href = \"index.php\";
-                                    </script>";
+                                    header("location: index.php");
                                 }
                                 else{
                                     echo"<div id=\"submit_reply\">Record not found, please try again.</div>";
