@@ -60,7 +60,7 @@
             </form>
             <!--php form handling-->
             <?php
-        if ($_SERVER['REQUEST_METHOD'] === 'POST'){//check if form is submitted
+            if ($_SERVER['REQUEST_METHOD'] === 'POST'){//check if form is submitted
                 //connect to the database
                 $host = "localhost";
                 $user = "root";
@@ -107,10 +107,6 @@
                     $sql = "INSERT INTO blogs (authorname, `image`, `name`, `type`, title, body)
                     VALUES ('$author_name','$blob','$name', '$type', '$title', '$body')";
                 }                
-
-
-
-                mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
                 //check if insertion was a success 
                 if ($connection->query($sql) === TRUE) {

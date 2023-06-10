@@ -11,6 +11,7 @@
 <body>
     <div id = "header_in_simple_post">
          <?php
+             session_start();
              include('header.php');
              include('getBlogs.php');
          ?>
@@ -26,15 +27,24 @@
             <div id = "simple_post_text">
                 <p><?php echo $q['body'] ?></p>
             </div>
+            <figure>
+                <?php echo '<img width="100px" height="100px" class = "writer" alt="" src="data:image/;base64,'.base64_encode($q['photo']).'"/>' ?>
+                <figcaption>Author :<?php echo $q['authorname']?> 
+                </figcaption><!--session name from joined tables -->
+           </figure>
             
         </main>
 
         <aside id = "simple_post_container_aside">
-            <div class="aside_list">
-                <h3>Title</h3><br>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga magnam quod praesentium enim 
-                    a aut exercitationem id sapiente sit voluptatum.</p>
-                <button class="aside_list_button">More</button>
+            <?php foreach($queryOne as $q)?>
+            <?php foreach($query as $Q)
+                if($Q['title'] != $q['title'] || $Q['publishdate'] != $q['publishdate']) :?>                    
+                    <div class="aside_list">
+                    <h3><?php echo $q['title'] ?></h3><br>
+                    <p><?php echo $q['body'] ?></p>
+                    <sub><?php echo "BY - ". $q['authorname'] ?></sub>
+                    <button class="aside_list_button">More</button>
+                <?php endif;?>
             </div>
         </aside>
     </div>
