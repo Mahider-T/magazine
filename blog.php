@@ -91,8 +91,8 @@
                 }
                 $name = $image["name"];
                 $type = $image["type"];
-                $blob = addslashes(file_get_contents($image["tmp_name"]));
-
+                $blob = addslashes(file_get_contents($image["tmp_name"]));                
+                
                 //Insert data into the database
                 $sql = "INSERT INTO blogs (authorname, `image`, `name`, `type`, title, body)
                 VALUES ('$author_name','$blob','$name', '$type', '$title', '$body')";
