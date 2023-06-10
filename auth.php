@@ -1,6 +1,4 @@
-<?php
-    session_start();    
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,6 +107,8 @@
                 <input name = "password" id = "password" type = "password" required><br><br>
                 <!--php code to handle the form submission-->
                 <?php
+                    
+                    session_start();
                     if ($_SERVER['REQUEST_METHOD'] === 'POST'){//check if form is submitted
                         // Retrieve form data
                             $username = $_POST['username'];
@@ -122,14 +122,17 @@
 
                             $connection = new mysqli($host, $user, $pass, $db) or die("unable to connect");
                     
-                        //check if record exists as an author                            
-                            $sqlauthor = "SELECT * FROM author_information WHERE username = '$username' AND password = '$password'";
+                        //check if record exists as an author and retrieve the name for blogging, editing...                         
+                            $sqlauthor = "SELECT name FROM author_information WHERE username = '$username' AND password = '$password'";
                             $qresult1=mysqli_query($connection, $sqlauthor);
                             $count1=mysqli_num_rows($qresult1);
-
+                        
                             if($count1 > 0)
                             {
-                                $_SESSION["blog"] = false;
+                                foreach($qresult1 as $q1){
+                                    $_SESSION['Name'] = $q1['name'];
+                                }                           
+                                $_SESSION["adminFlag"] = true;
                                 header("location: index.php");
                             }
                             else{
@@ -140,8 +143,10 @@
 
                                 if($count > 0)
                                 {   
-                                    $_SESSION["blog"] = true;
-
+                                    foreach($qresult as $q){
+                                        $_SESSION['Name'] = $q['name'];
+                                    }     
+                                    $_SESSION["adminFlag"] = false;
                                     header("location: index.php");
                                 }
                                 else{

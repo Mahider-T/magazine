@@ -39,7 +39,7 @@
                 ob_start();
                 include "auth.php";
                 ob_end_clean();
-                if($_SESSION["blog"] == true){
+                if($_SESSION["adminFlag"] == false){
                 echo "<script type = \"text/javascript\">
                         document.getElementById(\"blog\").style.display = \"none\";
                     </script>";

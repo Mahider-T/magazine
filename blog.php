@@ -10,7 +10,11 @@
 </head>
 <body>
 <?php
+    session_start();
     include("header.php");
+    ob_start();
+    include "auth.php";
+    ob_end_clean();
 ?>
 <div id = "main_container">
     <aside id = "blog_aside">
@@ -43,18 +47,15 @@
         <div id = "content_area">
             <form id = "form" action="blog.php" method="post" enctype="multipart/form-data">
                 <label for = "post_field"> <h1>Write post here<h1></label>
-
-                <input class="inputs" id="author_name" name="author_name" type="text"placeholder="Enter author's name here." required></input>
-                
+                <!-- <a href="edit.php?id=<?php echo $q['id']?>" class="btn btn-light btn-sm" name="edit">Edit</a> -->
+            
                 <label for="image">Upload Image</label>
                 <input type="file" name="image" accept="image/*" title="insert an image related to your blog"/>
 
                 <input class="inputs" type="text" name="title" id="title"  placeholder="Enter blog title here." required>
-                
                 <textarea id = "body" name="body" placeholder="Enter the blog content here." required></textarea><br><br>
                 
                 <input type = "submit" value="Post" id = "submit"><br><br>
-                
                 <input type = "file" id = "upload_file">
             </form>
             <!--php form handling-->
@@ -79,23 +80,36 @@
                     // else{
                 
                 // Retrieve form data
-                $author_name = $_POST['author_name'];
+                $author_name = $_SESSION['Name'];
                 $title = $_POST['title'];
                 $body = $_POST['body'];
                 $image = $_FILES["image"];
-                $info = getimagesize($image["tmp_name"]);
-                // check if $image is an image file
-                if(!$info)
+                 
+                //check if image file has been not been uploaded
+                if (!file_exists($_FILES['image']['tmp_name']) || !is_uploaded_file($_FILES['image']['tmp_name'])) 
                 {
-                    die("File is not an image");
+                    $sql = "INSERT INTO blogs (authorname, title, body)
+                    VALUES ('$author_name','$title', '$body')";
                 }
-                $name = $image["name"];
-                $type = $image["type"];
-                $blob = addslashes(file_get_contents($image["tmp_name"]));                
+                else //if image file has been uploaded
+                {
+                    $info = getimagesize($image["tmp_name"]);
+                    // check if $image is an image file
+                    if(!$info)
+                    {
+                        die("file is not a supported image format !");
+                    }                
+                    $name = $image["name"];
+                    $type = $image["type"];
+                    $blob = addslashes(file_get_contents($image["tmp_name"]));              
                 
-                //Insert data into the database
-                $sql = "INSERT INTO blogs (authorname, `image`, `name`, `type`, title, body)
-                VALUES ('$author_name','$blob','$name', '$type', '$title', '$body')";
+                    //Insert data into the database
+                    $sql = "INSERT INTO blogs (authorname, `image`, `name`, `type`, title, body)
+                    VALUES ('$author_name','$blob','$name', '$type', '$title', '$body')";
+                }                
+
+
+
                 mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
                 //check if insertion was a success 

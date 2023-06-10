@@ -10,8 +10,12 @@
 </head>
 <body>
     <?php
-        include('header.php');
+        session_start();
+        include("header.php");
         include('getBlogs.php');
+        ob_start();
+        include "auth.php";
+        ob_end_clean();
     ?>
     <div class = "hero" id = "top_of_the_page">
         <img src = "Images/image2.jpg" width="100%" height="100%" id = "image1" style="object-fit:cover">
