@@ -36,15 +36,18 @@
         </main>
 
         <aside id = "simple_post_container_aside">
-            <?php foreach($queryOne as $q)?>
-            <?php foreach($query as $Q)
-                if($Q['title'] != $q['title'] || $Q['publishdate'] != $q['publishdate']) :?>                    
+            <?php foreach($query as $Q){?>
+            <?php foreach($queryOne as $q){?>
+                <?php if($Q['title'] != $q['title'] || $Q['publishdate'] != $q['publishdate']) :?>                    
                     <div class="aside_list">
                     <h3><?php echo $q['title'] ?></h3><br>
                     <p><?php echo $q['body'] ?></p>
                     <sub><?php echo "BY - ". $q['authorname'] ?></sub>
                     <button class="aside_list_button">More</button>
+                    <?php break;?>
                 <?php endif;?>
+                <?php }?>
+            <?php }?>
             </div>
         </aside>
     </div>
