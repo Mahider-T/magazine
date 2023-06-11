@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    ob_start();
+    include("auth.php");
+    ob_end_clean();
+
+
     $host = "localhost";
     $user = "root";
     $pass = "";
@@ -15,6 +21,11 @@
 
     $sqlOne = "SELECT * FROM blogs ORDER BY id DESC LIMIT 2";
     $queryOne = mysqli_query($connection, $sqlOne);
+
+    $Name = $_SESSION['Name'];
+    // echo "<script>alert('this is $Name')</script>";
+    $sqlAuthor = "SELECT * FROM blogs WHERE authorname = '$Name' ";
+    $queryAuthor = mysqli_query($connection, $sqlAuthor);
 
     //query which diplay specific contents of a blog if readmore is triggered
     if(isset($_REQUEST['id'])){

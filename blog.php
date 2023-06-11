@@ -12,6 +12,7 @@
 <?php
     session_start();
     include("header.php");
+    include("getBlogs.php");
     ob_start();
     include "auth.php";
     ob_end_clean();
@@ -47,7 +48,9 @@
         <div id = "content_area">
             <form id = "form" action="blog.php" method="post" enctype="multipart/form-data">
                 <label for = "post_field"> <h1>Write post here<h1></label>
-                <!-- <a href="edit.php?id=<?php echo $q['id']?>" class="btn btn-light btn-sm" name="edit">Edit</a> -->
+                <a href="myblogs.php?">
+                            MY BLOGS
+                </a>
             
                 <label for="image">Upload Image</label>
                 <input type="file" name="image" accept="image/*" title="insert an image related to your blog"/>
