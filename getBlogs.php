@@ -1,7 +1,7 @@
 <?php
     session_start();
     ob_start();
-    include("auth.php");
+    include("login.php");
     ob_end_clean();
 
 
@@ -30,9 +30,16 @@
     $queryOne = mysqli_query($connection, $sqlOne);
 
     $Name = $_SESSION['Name'];
+    //query for authors blogs on the left side of the blog page 
+    $sqlBlogAside ="SELECT * 
+                    FROM blogs, author_information
+                    WHERE blogs.authorname = author_information.name AND 
+                          blogs.authorname = '$Name'
+                    ORDER BY id DESC LIMIT 4";
+    $queryBlogAside = mysqli_query($connection, $sqlBlogAside);
     // echo "<script>alert('this is $Name')</script>";
-    $sqlAuthor = "SELECT * FROM blogs WHERE authorname = '$Name' ";
-    $queryAuthor = mysqli_query($connection, $sqlAuthor);
+    // $sqlAuthor = "SELECT * FROM blogs WHERE authorname = '$Name' ";
+    // $queryAuthor = mysqli_query($connection, $sqlAuthor);
 
     //query which diplay specific contents of a blog if readmore is triggered
     if(isset($_REQUEST['id'])){
