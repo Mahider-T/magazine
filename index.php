@@ -14,7 +14,7 @@
         include("header.php");
         include('getBlogs.php');
         ob_start();
-        include "auth.php";
+        include "login.php";
         ob_end_clean();
     ?>
     <div class = "hero" id = "top_of_the_page">
@@ -33,77 +33,64 @@
     <main>
         <div class = "container">
             <!-- <div class = "test" style="height: 500px; width: 500px; background-color:aqua"></div> -->
+            <!-- first division of suggestions -->
             <div class = "divider " id = "divider_one">
-                <?php foreach($query as $q){ ?>
-                    <div class = "each_article " id = "article11">
-                        <h1><?php echo $q['title']?></h1><br>
-                        <?php echo '<img width="100px" height="100px" class = "writer" alt="" src="data:image/;base64,'.base64_encode($q['photo']).'"/>' ?>
-                        <sub style="color:gray"><?php echo $q['authorname']?></sub>
-                        <p><?php echo $q['body']?></p> <!--Sifen removed 'class = "fade-in"', it makes the text invisible-->
-                        <a href="viewBlog.php?id=<?php echo $q['id']?>">
-                            READ MORE
-                        </a>
-                    </div>
+                <?php
+                    $loopNumber = 0; 
+                    foreach($query as $q){
+                        $loopNumber++; 
+                        if($loopNumber < 3 ):?>
+                        <div class = "each_article" id = "article11">
+                            <h1><?php echo $q['title']?></h1><br>
+                            <?php echo '<img width="100px" height="100px" class = "writer" alt="" src="data:image/;base64,'.base64_encode($q['photo']).'"/>' ?>
+                            <sub style="color:gray"><?php echo $q['authorname']?></sub>
+                            <p><?php echo $q['body']?></p> <!--Sifen removed 'class = "fade-in"', it makes the text invisible-->
+                            <a href="viewBlog.php?id=<?php echo $q['id']?>">
+                                READ MORE
+                            </a>
+                        </div>
+                <?php endif;?>
                 <?php }?>
-                <!--<div class = "each_article " id = "article12">
-                    <h1>Who killed Jefferey?</h1><br>
-                    <img src="Images/dt.png" width="100px" height="100px" class = "writer"><br>
-                    <sub style="color:gray">Donald Trump</sub>
-                    <p class = "fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maiores nobis atque debitis rem asperiores eveniet provident 
-                            tempora eaque laudantium nisi voluptatibus assumenda incidunt 
-                            dolorem fuga, omnis sit dolor reiciendis expedita sapiente facilis accusamus error iusto odio. 
-                            Deserunt quod eaque sit iusto doloribus distinctio 
-                            laborum, accusamus natus esse, mollitia suscipit maxime.</p>
-                </div>
             </div>
+            <!-- second division of suggestions -->
             <div class = "divider " id = "divider_two">
-                <div class = "each_article " id = "article21">
-                    <h1>Who killed Jefferey?</h1><br>
-                    <img src="Images/mia.jpg" width="100px" height="100px" class = "writer"><br>
-                    <sub style="color:gray">Mia Khalifa</sub>
-                    <p class = "fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maiores nobis atque debitis rem asperiores eveniet provident 
-                            tempora eaque laudantium nisi voluptatibus assumenda incidunt 
-                            dolorem fuga, omnis sit dolor reiciendis expedita sapiente facilis accusamus error iusto odio. 
-                            Deserunt quod eaque sit iusto doloribus distinctio 
-                            laborum, accusamus natus esse, mollitia suscipit maxime.</p>
-                </div>
-                <div class = "each_article" id = "article22">
-                    <h1>Who killed Jefferey?</h1><br>
-                    <img src="Images/dt.png" width="100px" height="100px" class = "writer"><br>
-                    <sub style="color:gray">Donald Trump</sub>
-                    <p class = "fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maiores nobis atque debitis rem asperiores eveniet provident 
-                            tempora eaque laudantium nisi voluptatibus assumenda incidunt 
-                            dolorem fuga, omnis sit dolor reiciendis expedita sapiente facilis accusamus error iusto odio. 
-                            Deserunt quod eaque sit iusto doloribus distinctio 
-                            laborum, accusamus natus esse, mollitia suscipit maxime.</p>
-                </div>
+                <?php
+                    $loopNumber = 0; 
+                    foreach($query as $q){
+                        $loopNumber++; 
+                        if($loopNumber == 3 || $loopNumber == 4 ):?>
+                        <div class = "each_article " id = "article11">
+                            <h1><?php echo $q['title']?></h1><br>
+                            <?php echo '<img width="100px" height="100px" class = "writer" alt="" src="data:image/;base64,'.base64_encode($q['photo']).'"/>' ?>
+                            <sub style="color:gray"><?php echo $q['authorname']?></sub>
+                            <p><?php echo $q['body']?></p> <!--Sifen removed 'class = "fade-in"', it makes the text invisible-->
+                            <a href="viewBlog.php?id=<?php echo $q['id']?>">
+                                READ MORE
+                            </a>
+                        </div>
+                <?php endif;?>
+                <?php }?>
             </div>
-            <div class = "divider" id = "divider_three">
-                <div class = "each_article " id = "article31" >
-                    <h1>Who killed Jefferey?</h1><br>
-                    <img src="Images/dt.png" width="100px" height="100px" class = "writer"><br>
-                    <sub style="color:gray">Donald Trump</sub>
-                    <p class = "fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maiores nobis atque debitis rem asperiores eveniet provident 
-                            tempora eaque laudantium nisi voluptatibus assumenda incidunt 
-                            dolorem fuga, omnis sit dolor reiciendis expedita sapiente facilis accusamus error iusto odio. 
-                            Deserunt quod eaque sit iusto doloribus distinctio 
-                            laborum, accusamus natus esse, mollitia suscipit maxime.</p>
-                </div>
-                <div class = "each_article " id = "article32">
-                    <h1>Who killed Jefferey?</h1><br>
-                    <img src="Images/dt.png" width="100px" height="100px" class = "writer"><br>
-                    <sub style="color:gray">Donald Trump</sub>
-                    <p class = "fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Maiores nobis atque debitis rem asperiores eveniet provident 
-                            tempora eaque laudantium nisi voluptatibus assumenda incidunt 
-                            dolorem fuga, omnis sit dolor reiciendis expedita sapiente facilis accusamus error iusto odio. 
-                            Deserunt quod eaque sit iusto doloribus distinctio 
-                            laborum, accusamus natus esse, mollitia suscipit maxime.</p>
-                </div>-->
+
+            <!-- second division of suggestions -->
+            <div class = "divider " id = "divider_one">
+                <?php
+                    $loopNumber = 0; 
+                    foreach($query as $q){
+                        $loopNumber++; 
+                        if($loopNumber > 4 ):?>
+                        <div class = "each_article " id = "article11">
+                            <h1><?php echo $q['title']?></h1><br>
+                            <?php echo '<img width="100px" height="100px" class = "writer" alt="" src="data:image/;base64,'.base64_encode($q['photo']).'"/>' ?>
+                            <sub style="color:gray"><?php echo $q['authorname']?></sub>
+                            <p><?php echo $q['body']?></p> <!--Sifen removed 'class = "fade-in"', it makes the text invisible-->
+                            <a href="viewBlog.php?id=<?php echo $q['id']?>">
+                                READ MORE
+                            </a>
+                        </div>
+                <?php endif;?>
+                <?php }?>
+            </div>
             </div>
         </div>
     </main>

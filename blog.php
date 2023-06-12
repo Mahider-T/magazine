@@ -14,7 +14,7 @@
     include("header.php");
     include("getBlogs.php");
     ob_start();
-    include "auth.php";
+    include "login.php";
     ob_end_clean();
 ?>
 <div id = "main_container">

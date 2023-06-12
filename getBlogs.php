@@ -1,7 +1,7 @@
 <?php
     session_start();
     ob_start();
-    include("auth.php");
+    include("login.php");
     ob_end_clean();
 
 

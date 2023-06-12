@@ -25,7 +25,7 @@
                 <?php echo '<img alt="" src="data:image/;base64,'.base64_encode($q['image']).'"/>' ?>
             </div>
             <div id = "simple_post_text">
-                <p><?php echo $q['body'] ?></p>
+                <p><pre><?php echo $q['body'] ?></pre></p>
             </div>
             <figure>
                 <?php echo '<img width="100px" height="100px" class = "writer" alt="" src="data:image/;base64,'.base64_encode($q['photo']).'"/>' ?>
