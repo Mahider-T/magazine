@@ -22,36 +22,20 @@
         <div id = "blog_aside_header">
             <h1>Recently Added</h1>
         </div>
-        <div class = "blog_list">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, mollitia.</p>
-            <button class="read_more">Read more</button>
+        <?php foreach($queryBlogAside as $q){ ?>
+            <div class = "blog_list">
+            <h1><?php echo $q['title']?></h1>
+            <p><?php echo $q['body']?></p>
+            <a href="viewBlog.php?id=<?php echo $q['id']?>"><button class="read_more">Read more
+            </button></a>
         </div>
-        <div class = "blog_list ">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-            <button class="read_more">Read more</button>
-        </div>
-        <div class = "blog_list ">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-            <button class="read_more">Read more</button>
-        </div>
-        <div class = "blog_list ">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere.</p>
-            <button class="read_more">Read more</button>
-        </div>
+        <?php }?>        
         
     </aside>
     <main>
         <div id = "content_area">
             <form id = "form" action="blog.php" method="post" enctype="multipart/form-data">
-                <label for = "post_field"> <h1>Write post here<h1></label>
-                <a href="myblogs.php?">
-                            MY BLOGS
-                </a>
-            
+                <label for = "post_field"> <h1>Write post here<h1></label>            
                 <label for="image">Upload Image</label>
                 <input type="file" name="image" accept="image/*" title="insert an image related to your blog"/>
 
