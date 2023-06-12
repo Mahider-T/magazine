@@ -37,7 +37,7 @@
                 <?php foreach($query as $q){ ?>
                     <div class = "each_article " id = "article11">
                         <h1><?php echo $q['title']?></h1><br>
-                        <img src="Images/ldr.jpg" width="100px" height="100px" class = "writer"><br>
+                        <?php echo '<img width="100px" height="100px" class = "writer" alt="" src="data:image/;base64,'.base64_encode($q['photo']).'"/>' ?>
                         <sub style="color:gray"><?php echo $q['authorname']?></sub>
                         <p><?php echo $q['body']?></p> <!--Sifen removed 'class = "fade-in"', it makes the text invisible-->
                         <a href="viewBlog.php?id=<?php echo $q['id']?>">

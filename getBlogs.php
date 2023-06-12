@@ -16,10 +16,17 @@
     }
 
     //query that select the recent 6 blogs for the home page
-    $sql = "SELECT * FROM blogs ORDER BY id DESC LIMIT 6";
+    $sql = "SELECT * 
+            FROM blogs, author_information
+            WHERE blogs.authorname = author_information.name
+            ORDER BY id DESC LIMIT 6";
     $query = mysqli_query($connection, $sql);
 
-    $sqlOne = "SELECT * FROM blogs ORDER BY id DESC LIMIT 2";
+    //query for viewBlogs page most recent blog other than the one currently viewed
+    $sqlOne = " SELECT * 
+                FROM blogs, author_information
+                WHERE blogs.authorname = author_information.name
+                ORDER BY id DESC LIMIT 2";
     $queryOne = mysqli_query($connection, $sqlOne);
 
     $Name = $_SESSION['Name'];
