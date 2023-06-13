@@ -1,7 +1,7 @@
 <?php
     session_start();
     ob_start();
-    include("login.php");
+    include("auth.php");
     ob_end_clean();
 
 
@@ -23,11 +23,11 @@
     $query = mysqli_query($connection, $sql);
 
     //query for viewBlogs page most recent blog other than the one currently viewed
-    $sqlOne = " SELECT * 
+    $sqlFour = " SELECT * 
                 FROM blogs, author_information
                 WHERE blogs.authorname = author_information.name
-                ORDER BY id DESC LIMIT 2";
-    $queryOne = mysqli_query($connection, $sqlOne);
+                ORDER BY id DESC LIMIT 2";//decide on 1 or 4 for the number of suggesstions
+    $queryFour = mysqli_query($connection, $sqlFour);
 
     $Name = $_SESSION['Name'];
     //query for authors blogs on the left side of the blog page 
@@ -37,6 +37,12 @@
                           blogs.authorname = '$Name'
                     ORDER BY id DESC LIMIT 4";
     $queryBlogAside = mysqli_query($connection, $sqlBlogAside);
+    
+    //query for the authors list on about us page
+    $sqlEditors  = "SELECT * FROM author_information";
+    $queryEditors = mysqli_query($connection, $sqlEditors);
+    
+    
     // echo "<script>alert('this is $Name')</script>";
     // $sqlAuthor = "SELECT * FROM blogs WHERE authorname = '$Name' ";
     // $queryAuthor = mysqli_query($connection, $sqlAuthor);

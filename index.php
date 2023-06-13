@@ -14,7 +14,7 @@
         include("header.php");
         include('getBlogs.php');
         ob_start();
-        include "login.php";
+        include "auth.php";
         ob_end_clean();
     ?>
     <div class = "hero" id = "top_of_the_page">

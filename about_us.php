@@ -10,6 +10,7 @@
 <body>
     <?php
         include('header.php');
+        include ('getBlogs.php');
     ?>
     <br><br><br>
     <main class = "about_us">
@@ -56,32 +57,14 @@
         </div>
 
         <div class = "group_members">
+        <?php foreach($queryEditors as $q){ ?>
             <div class = "member_list">
-                <img src = "Images/dt.png" width="100px" height="100px" class="author">
-                <sub>Donald Trummp</sub>
-                <sub>Edtior</sub>
+                <?php echo '<img width="100px" height="100px" class="author" alt="" src="data:image/;base64,'.base64_encode($q['photo']).'"/>' ?>
+                <sub><?php echo $q['name']?></sub>
+                <sub>Editor</sub>
             </div>
-            <div class = "member_list">
-                <img src = "Images/dt.png" width="80%" height="80%" class="author">
-                <sub>Donald Trummp</sub>
-                <sub>Edtior</sub>
-            </div>
-            <div class = "member_list">
-                <img src = "Images/dt.png" width="80%" height="80%" class="author">
-                <sub>Donald Trummp</sub>
-                <sub>Edtior</sub>
-            </div>
-            <div class = "member_list">
-                <img src = "Images/dt.png" width="80%" height="80%" class="author">
-                <sub>Donald Trummp</sub>
-                <sub>Edtior</sub>
-            </div>
-            <div class = "member_list">
-                <img src = "Images/dt.png" width="80%" height="80%" class="author">
-                <sub>Donald Trummp</sub>
-                <sub>Edtior</sub>
-            </div>
-        </div>
+        <?php }?> 
+    </div>
 
     </main>
 

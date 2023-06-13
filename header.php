@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include('getBlogs.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,13 @@
             <p>Newspaper.</p>
             <ul class = "text-nav">
                 <li><a href="index.php">Home page</a></li>
-                <li><a href="simple_post.php">Simple post</a></li>
+                <?php foreach($queryFour as $q){
+                        if(true){
+                        $id = $q['id'];
+                        break;}
+                     }
+                ?>
+                <li><a href="viewBlog.php?id=<?php echo $id?>">Simple post</a></li>
                 <li><a href="about_us.php">About us</a></li>
                 <li><a href="blog.php" id = "blog">Blog</a></li>
             </ul>
