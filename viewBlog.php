@@ -17,7 +17,8 @@
          ?>
     </div>
     <div id = "simple_post_container">
-        <?php foreach($query as $q)?>
+        <?php 
+        foreach($query as $q)?>
         <main id = "simple_post_container_main">
             <div id = "simple_post_image">
                 <h1><?php echo $q['title'] ?></h1>
@@ -39,11 +40,13 @@
             <?php foreach($query as $Q){?>
             <?php foreach($queryFour as $q){?>
                 <?php if($Q['title'] != $q['title'] || $Q['publishdate'] != $q['publishdate']) :?>                    
-                    <div class="aside_list">
+                    <div cloginlass="aside_list">
                     <h3><?php echo $q['title'] ?></h3><br>
                     <p><?php echo $q['body'] ?></p>
                     <sub><?php echo "BY - ". $q['authorname'] ?></sub>
+                    <a href="viewBlog.php?id=<?php echo $q['id'] ?>">
                     <button class="aside_list_button">More</button>
+                    </a>
                     <?php break;?>
                 <?php endif;?>
                 <?php }?>

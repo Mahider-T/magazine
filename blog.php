@@ -14,7 +14,7 @@
     include("header.php");
     include("getBlogs.php");
     ob_start();
-    include "login.php";
+    include "auth.php";
     ob_end_clean();
 ?>
 <div id = "main_container">
@@ -43,7 +43,7 @@
                 <textarea id = "body" name="body" placeholder="Enter the blog content here." required></textarea><br><br>
                 
                 <input type = "submit" value="Post" id = "submit"><br><br>
-                <input type = "file" id = "upload_file">
+                <!-- <input type = "file" id = "upload_file"> -->
             </form>
             <!--php form handling-->
             <?php
