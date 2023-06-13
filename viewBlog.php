@@ -25,7 +25,7 @@
                 <?php echo '<img alt="" src="data:image/;base64,'.base64_encode($q['image']).'"/>' ?>
             </div>
             <div id = "simple_post_text">
-                <p><pre><?php echo $q['body'] ?></pre></p>
+                <p><?php echo $q['body'] ?></p> <!--decide on the pre tag-->
             </div>
             <figure>
                 <?php echo '<img width="100px" height="100px" class = "writer" alt="" src="data:image/;base64,'.base64_encode($q['photo']).'"/>' ?>
@@ -37,7 +37,7 @@
 
         <aside id = "simple_post_container_aside">
             <?php foreach($query as $Q){?>
-            <?php foreach($queryOne as $q){?>
+            <?php foreach($queryFour as $q){?>
                 <?php if($Q['title'] != $q['title'] || $Q['publishdate'] != $q['publishdate']) :?>                    
                     <div class="aside_list">
                     <h3><?php echo $q['title'] ?></h3><br>
