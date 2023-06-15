@@ -22,7 +22,7 @@
                        alt="">
             <ul>
                 <li><a href = "contact.html">Contact</a></li>
-                <li><a href="login.php">Login/Signup</a></li>
+                <li><a href="auth.php">Login/Signup</a></li>
             </ul>
         </div>
         <div class = "bottom-header">
