@@ -45,7 +45,7 @@ function changeHeaderImage(){
         (index > 1)? index = 0: index++; 
     }
     window.onload = () => {
-        setInterval(changeImage,2500)
+        setInterval(changeImage,)
     } 
 }
 changeHeaderImage();
@@ -58,5 +58,20 @@ const observer = new IntersectionObserver((entries) => {
     });
   });
   
-  observer.observe(document.querySelectorAll('.fade-in'));
+observer.observe(document.querySelectorAll('.fade-in'));
   
+
+let linkarray = Array.from(document.getElementsByClassName("nav-link"));
+linkarray[0].onclick = function(){
+    linkarray[0].style.color = "red";
+}
+
+// linkarray.forEach(element => element.onclick =  function(){
+//     element.className = "activated";
+//     element.siblings.className = "";
+// }
+// )
+
+$('.navigation a').click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    });

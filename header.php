@@ -13,27 +13,31 @@
 </head>
 <body>
 
-<header>
-        <div class = "top-header">
-            <p>Magazine and newspaper with news around AAU</p>
+<header style="box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);">
+        <div class = "top-header">         
+                <p style="padding-left:55px">Magazine and newspaper with news around AAU</p>
+                <img   src="Images/Addis_Ababa_University_logo.png" 
+                       style="border: 0.35em solid inherit;border-left:0.9em solid inherit; border-bottom-right-radius:50%; 
+                       background-color:inherit; width:6%; float:left; max-width:52px; position:absolute; top:-4px;left:0px;" 
+                       alt="">
             <ul>
                 <li><a href = "contact.html">Contact</a></li>
                 <li><a href="login.php">Login/Signup</a></li>
             </ul>
         </div>
         <div class = "bottom-header">
-            <p>Newspaper.</p>
+            <p id="newspaper">Newspaper.</p>
             <ul class = "text-nav">
-                <li><a href="index.php">Home page</a></li>
+                <li><a class="nav-link" href="index.php">Home page</a></li>
                 <?php foreach($queryFour as $q){
                         if(true){
                         $id = $q['id'];
                         break;}
                      }
                 ?>
-                <li><a href="viewBlog.php?id=<?php echo $id?>">Simple post</a></li>
-                <li><a href="about_us.php">About us</a></li>
-                <li><a href="blog.php" id = "blog">Blog</a></li>
+                <li><a class="nav-link" href="viewBlog.php?id=<?php echo $id?>">Simple post</a></li>
+                <li><a class="nav-link" href="about_us.php">About us</a></li>
+                <li><a class="nav-link" href="blog.php" id = "blog">Blog</a></li>
             </ul>
             <ul class = "icon-nav">
                 <li><a href="https://www.freepnglogos.com/pics/logo-ig-png" title="Image from freepnglogos.com"><img src="Icons/instagram_logo.png" width="24" alt="instagram logo" /></a></li>
@@ -54,5 +58,11 @@
             ?>
         </div>
     </header>  
+    <script>
+            let linkarray = Array.from(document.getElementsByClassName("nav-link"));
+            linkarray[1].onclick = function(){
+            linkarray[1].className = "activated";
+            }
+    </script>
 </body>
 </html>
