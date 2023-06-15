@@ -13,7 +13,7 @@
 .top-header {
     height: 2rem;
     display: flex;
-    background-color: black;
+    background-color:#171717;
     color: white;
     justify-content: space-between;
     gap: auto;
@@ -32,7 +32,7 @@
 .bottom-header {
     display: flex;
     height: 4rem;
-    background-color: lightgrey;
+    background-color: rgb(246, 246, 246);
     justify-content: space-around;
     align-items: center;
     padding: 0px 20px 0px 20px;
@@ -57,15 +57,32 @@ header ul {
     list-style-type: none;
     gap: 2rem;
 }
+header #newspaper, .each_article h1 {
+    color:#a40434;
+}
+
+.bottom-header a{
+    display:block;
+    text-decoration: none;
+    color: black;
+}
 
 header .icon-nav {
     gap: 20px;
 }
 
-.bottom-header a {
-    text-decoration: none;
-    color: black
+.bottom-header a:after {
+  display: block;
+  content: '';
+  padding-bottom: 2px;
+  border-bottom: 3px solid #a40434a9;;  
+  transform: scaleX(0);  
+  transition: transform 300ms ease-in-out;
 }
+.bottom-header a:hover:after { transform: scaleX(1); }
+.bottom-header a:active {color:goldenrod;}
+
+
 .bottom-header p {
     font-weight: 500px;
     font-size: xx-large;
@@ -107,7 +124,7 @@ header .icon-nav {
 main .container {
     /* float: left; */
     display: flex;
-    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap;
     /* flex-shrink: 1; */
     height: auto;
     width: auto;
@@ -118,37 +135,64 @@ main .container {
 }
 
 .divider {
-    /* background-color: green; */
-    width: 23.33%;
+    /* background-color: gray; */
+    width: 32.0%;
     /* min-width: 100px; */
     height: 100%;
-    padding: 5%;
+    padding: 2%;
 }
 
-.container #divider_two {
-    /* background-color: yellow; */
+/* .container #divider_two {
+    /* background-color: yellow; 
     border-left: 2px solid black;
     border-right: 2px solid black;
-
-}
+} */
 
 .each_article{
-    padding: 20px 0px 20px 0px;
-    border-bottom: 2px solid black;
+    height: auto;
+    padding: 2px 20px 10px;
+    border-right: 2px dashed black;
+    border-bottom: 2px dashed black;
+    border-bottom-right-radius: 5px;
+    /* background-color: rgb(192, 146, 146); */
+    margin-bottom: 20px;
 }
 
 /* .container .divider_three{
      background-color: red 
 } */
-.writer {
+
+
+/* style added by Sifen for the home page suggestions */
+.writer{
     border-radius: 50%;
     object-fit: cover;
 }
 
+.suggestion_img {
+    border-radius:2px 2px 9px 2px; 
+    width: 100%; 
+    height:130px;
+    object-fit: cover;
+}
+.suggestion_p{
+    min-height:75px; 
+    height:7px;  
+    overflow:hidden; 
+    margin-top: 2px;
+}
+
+.each_article a{
+    margin-top: 5px;
+    font-family:monospace;
+    font-size: 16px;
+    text-decoration: none;
+}
+/* footer css rules*/
 footer {
     height: auto;
     width: 100%;
-    background-color: black;
+    background-color:#171717;
     color: white;
 }
 
@@ -175,7 +219,9 @@ footer .father_container {
 }
 
 footer ul {
-    list-style-type: none;
+    list-style-type: disc ;
+    list-style-type: style color;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer a {
@@ -195,6 +241,12 @@ footer .footer_links {
     margin-bottom: 10px;
 }
 
+#description::first-letter{
+    -webkit-initial-letter: 3;
+    initial-letter:3;
+    color: goldenrod;
+    font-weight: lighter;
+}
 
 /* Below here is a styling for the about us page */
 
@@ -529,3 +581,7 @@ footer .footer_links {
     padding-top: 100px;
     text-align: justify;
 }
+
+/* .activated{
+    background-color: green;
+} */
