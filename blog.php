@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link href="style.css" rel = "stylesheet">
+    <link href="blogstyle.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body> 
 <?php
     session_start();
     include("header.php");
@@ -18,7 +19,7 @@
     ob_end_clean();
 ?>
 <div id = "main_container">
-    <aside id = "blog_aside">
+    <aside id = "blog_aside" style="height: 750px;">
         <div id = "blog_aside_header">
             <h1>Recently Added</h1>
         </div>
@@ -32,19 +33,28 @@
         <?php }?>        
         
     </aside>
-    <main>
-        <div id = "content_area">
-            <form id = "form" action="blog.php" method="post" enctype="multipart/form-data">
-                <label for = "post_field"> <h1>Write post here<h1></label>            
+    <main id = "content_area" style="height: 750px;">
+        <form id = "form" action="blog.php" method="post" enctype="multipart/form-data">
+            <section id="blogHeader">
+                <h1>Welcome back <?php echo $_SESSION['Name']?></h1>    
+                <ul>
+                    <li>write your blogs here to share your stories about Addis Ababa University</li>
+                    <li>upload an image related to your blog to add a visual layer to your message.</li>
+                    <li>exlpore your previous posts in "My blogs" section</li>
+                </ul> 
                 <label for="image">Upload Image</label>
                 <input type="file" name="image" accept="image/*" title="insert an image related to your blog"/>
-
                 <input class="inputs" type="text" name="title" id="title"  placeholder="Enter blog title here." required>
-                <textarea id = "body" name="body" placeholder="Enter the blog content here." required></textarea><br><br>
-                
+                <!--<textarea cols="30" rows="15" id = "body" name="body" ></textarea><br><br> -->
+            </section>
+            <textarea style="padding: 50px;" class="textarea" contenteditable="" required></textarea>
+            </input>
+            <section id="blogFooter">
                 <input type = "submit" value="Post" id = "submit"><br><br>
                 <!-- <input type = "file" id = "upload_file"> -->
+            </section>
             </form>
+    </main>
             <!--php form handling-->
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'POST'){//check if form is submitted
@@ -109,8 +119,6 @@
                 // }
         }
         ?>
-        </div>
-    </main>
 </div>
 <?php
     include("footer.php");
