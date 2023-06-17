@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link href="style.css" rel = "stylesheet">
     <link href="blogstyle.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
@@ -18,8 +17,11 @@
     include "auth.php";
     ob_end_clean();
 ?>
-<div id = "main_container">
-    <aside id = "blog_aside" style="height: 750px;">
+<div id = "main_container" 
+        style="background-color:whitesmoke"
+    >
+    <aside id = "blog_aside" style="height: 750px;border: 0.12rem solid rgb(191, 191, 191);
+                                    margin-left:1%">
         <div id = "blog_aside_header">
             <h1>Recently Added</h1>
         </div>
@@ -33,21 +35,25 @@
         <?php }?>        
         
     </aside>
-    <main id = "content_area" style="height: 750px;">
+    <main id = "content_area" style="height: 750px;
+                                     border: 0.12rem solid rgb(191, 191, 191);">
         <form id = "form" action="blog.php" method="post" enctype="multipart/form-data">
             <section id="blogHeader">
-                <h1>Welcome back <?php echo $_SESSION['Name']?></h1>    
+                <h1>Welcome back <?php echo $_SESSION['Name']?> !</h1> 
+                <hr color="#a40434" style="margin:10px 0px 10px -25px">   
                 <ul>
-                    <li>write your blogs here to share your stories about Addis Ababa University</li>
+                    <li>write your blogs here to share your stories about Addis Ababa University.</li>
                     <li>upload an image related to your blog to add a visual layer to your message.</li>
                     <li>exlpore your previous posts in "My blogs" section</li>
                 </ul> 
-                <label for="image">Upload Image</label>
-                <input type="file" name="image" accept="image/*" title="insert an image related to your blog"/>
+                <div id="uploadFile">
+                    <label id="labelUpload" for="image">Upload Image</label>
+                    <input type="file" name="image" accept="image/*" title="insert an image related to your blog"/>
+                </div>
                 <input class="inputs" type="text" name="title" id="title"  placeholder="Enter blog title here." required>
                 <!--<textarea cols="30" rows="15" id = "body" name="body" ></textarea><br><br> -->
             </section>
-            <textarea style="padding: 50px;" class="textarea" contenteditable="" required></textarea>
+            <textarea style="padding: 30px 40px; border: 1px solid #727272" class="textarea" contenteditable=""  placeholder="Enter blog content here" ></textarea>
             </input>
             <section id="blogFooter">
                 <input type = "submit" value="Post" id = "submit"><br><br>
