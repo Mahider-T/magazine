@@ -1,0 +1,247 @@
+/* From here to the bottom is a code for the blog page */
+@font-face {
+    font-family: "custom font";
+    src: url("fonts/Roboto-Light.ttf");
+}
+
+body{
+    display:flex;flex-flow:column;height:150%;
+}
+
+#main_container {
+    flex: 1 0 auto;
+    /* justify-content: space-between; */
+    margin-bottom: 1px;
+    display: flex;
+}
+
+#blog_aside {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* height: 90vh; */
+    /*could be 100vh tho or the same as the height of the writing box(text area)*/
+    width: 20vw;
+    margin-top: 100px;
+    margin-left: 10px;
+    border-radius: 2px;
+    /* gap: 20px; */
+    background-color: inherit;
+    float: left;
+}
+
+#blog_aside_header {
+    border: 0.12rem solid rgb(191, 191, 191);
+    margin-bottom: 5px;
+    height: 150px;
+    /* background-color: lightgray; */
+    background-image: url("Images/mypost.png");
+    background-size: cover;
+    background-position-y: -5px;
+    color: black;
+    font-family: 'Nanum Myeongjo', serif;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: inherit;
+}
+
+.blog_list {
+    padding: 15px;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    background-color: white;
+    box-shadow: 0px 0px 5px gray;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+.blog_list p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 5px;
+    color: #171717;
+}
+
+.blog_list h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;    display: -webkit-box;
+    font-family: "custom font";
+    margin-bottom: 5px;
+}
+
+.read_more, #form #submit, #blogHeader input[type=file]::file-selector-button{
+    padding: 10px 20px;
+    border:none;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition:background .2s ease-in-out;
+    background-color: rgb(250, 230, 180);
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.read_more{
+    margin-top: 9px;
+    padding: 7px 14px;
+    border: 1px solid gray;
+}
+
+#form #submit{
+    align-self: center;
+    text-align: center;
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 150px;
+    padding: 9px 16px;
+    border: 1px solid #111;
+    font-size: large;
+
+}
+
+#form #submit:hover , .read_more:hover{
+    background-color: rgb(250, 215, 126);
+}
+
+#content_area {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    padding: 20px; 
+    margin: 5px;
+    margin-top: 100px;
+    width: 100%;
+
+}
+h1{
+    font-family: "custom font";
+    
+}
+#form{
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+}
+
+#blogHeader{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#blogHeader li{
+    color: rgb(32, 32, 32);
+    font-family: "custom font";
+    margin-left:7%;
+}
+
+#uploadFile{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    padding: 20px;
+    margin: 18px 0px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+#uploadFile:hover {
+    background: #dedede;
+    border-color: #111;
+  }
+  
+#labelUpload{
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+#uploadFile:hover #labelUpload{
+    color: #222;
+}
+
+#blogHeader input[type=file]{
+    border: 1px solid #575757;
+    padding: 3px;
+    border-radius: 15px;
+    font-family: "custom font";
+    color: #000000;
+}
+
+#blogHeader input[type=file]::file-selector-button{
+    margin-right: 20px;
+}
+
+#blogHeader input[type=file]::file-selector-button:hover{
+    background-color: rgb(250, 215, 126);
+}
+
+#title{
+    background-color: white;
+    border: 1px solid #727272;
+    border-radius: 4px;
+    padding: 7px 10px 7px 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: monospace;
+    margin-bottom:15px;
+}
+
+.textarea{
+    flex: 1 1 auto;
+    height: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    line-height: 20pt;
+    padding: 25px;
+    font-size: 17px;
+    font-family: 'custom font';
+    font-weight: 600;
+    color:rgb(20, 20, 20);
+    background-color: white;
+}
+
+/* .form .form_elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    gap: auto;
+
+} */
+
+#form #upload_file {
+    /* background-color: lightgray;  */
+    /* border: 2px solid black; */
+    color: black;
+    /* padding: 15px 32px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}

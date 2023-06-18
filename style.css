@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nanum+Myeongjo&family=Shadows+Into+Light&display=swap');
 
+@font-face {
+    font-family: "custom font";
+    src: url("fonts/Roboto-Light.ttf");
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -13,7 +18,7 @@
 .top-header {
     height: 2rem;
     display: flex;
-    background-color: black;
+    background-color:#171717;
     color: white;
     justify-content: space-between;
     gap: auto;
@@ -32,7 +37,7 @@
 .bottom-header {
     display: flex;
     height: 4rem;
-    background-color: lightgrey;
+    background-color: rgb(246, 246, 246);
     justify-content: space-around;
     align-items: center;
     padding: 0px 20px 0px 20px;
@@ -58,14 +63,39 @@ header ul {
     gap: 2rem;
 }
 
+.each_article h1{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+header #newspaper, .each_article h1 {
+    color:#a40434;
+}
+
+.bottom-header a{
+    display:block;
+    text-decoration: none;
+    color: black;
+}
+
 header .icon-nav {
     gap: 20px;
 }
 
-.bottom-header a {
-    text-decoration: none;
-    color: black
+.bottom-header a:after {
+  display: block;
+  content: '';
+  padding-bottom: 2px;
+  border-bottom: 3px solid #a40434a9;;  
+  transform: scaleX(0);  
+  transition: transform 300ms ease-in-out;
 }
+.bottom-header a:hover:after { transform: scaleX(1); }
+.bottom-header a:active {color:goldenrod;}
+
+
 .bottom-header p {
     font-weight: 500px;
     font-size: xx-large;
@@ -107,7 +137,7 @@ header .icon-nav {
 main .container {
     /* float: left; */
     display: flex;
-    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap;
     /* flex-shrink: 1; */
     height: auto;
     width: auto;
@@ -118,37 +148,74 @@ main .container {
 }
 
 .divider {
-    /* background-color: green; */
-    width: 23.33%;
+    /* background-color: gray; */
+    width: 32.0%;
     /* min-width: 100px; */
     height: 100%;
-    padding: 5%;
+    padding: 2%;
 }
 
-.container #divider_two {
-    /* background-color: yellow; */
+/* .container #divider_two {
+    /* background-color: yellow; 
     border-left: 2px solid black;
     border-right: 2px solid black;
-
-}
+} */
 
 .each_article{
-    padding: 20px 0px 20px 0px;
-    border-bottom: 2px solid black;
+    height: auto;
+    padding: 2px 20px 10px;
+    border-right: 2px dashed black;
+    border-bottom: 2px dashed black;
+    border-bottom-right-radius: 5px;
+    /* background-color: rgb(192, 146, 146); */
+    margin-bottom: 20px;
 }
 
 /* .container .divider_three{
      background-color: red 
 } */
-.writer {
+
+.each_article h1{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* style added by Sifen for the home page suggestions */
+.writer{
     border-radius: 50%;
     object-fit: cover;
 }
 
+.suggestion_img {
+    border-radius:2px 2px 9px 2px; 
+    width: 100%; 
+    height:130px;
+    object-fit: cover;
+}
+.suggestion_p{
+    min-height:75px; 
+    height:7px;  
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.each_article a{
+    margin-top: 5px;
+    font-family:monospace;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: inherit;
+}
+/* footer css rules*/
 footer {
     height: auto;
     width: 100%;
-    background-color: black;
+    background-color:#171717;
     color: white;
 }
 
@@ -175,7 +242,9 @@ footer .father_container {
 }
 
 footer ul {
-    list-style-type: none;
+    list-style-type: disc ;
+    list-style-type: style color;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer a {
@@ -195,6 +264,12 @@ footer .footer_links {
     margin-bottom: 10px;
 }
 
+#description::first-letter{
+    -webkit-initial-letter: 3;
+    initial-letter:3;
+    color: goldenrod;
+    font-weight: lighter;
+}
 
 /* Below here is a styling for the about us page */
 
@@ -333,122 +408,7 @@ footer .footer_links {
     text-align: center;
 }
 
-/* From here to the bottom is a code for the blog page */
-#main_container {
-    display: flex;
-    /* justify-content: space-between; */
-    background-color: gray;
-    margin-bottom: 1px;
-}
-
-#blog_aside {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    height: 90vh;
-    /*could be 100vh tho or the same as the height of the writing box(text area)*/
-    width: 20vw;
-    margin-top: 100px;
-    margin-left: 10px;
-    margin-right: auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    gap: 20px;
-    padding: 15px;
-    background-color: white;
-}
-
-#blog_aside_header {
-    width: 100%;
-    background-color: lightgray;
-    color: black;
-    font-family: 'Nanum Myeongjo', serif;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blog_list {
-    padding-bottom: 1px;
-    border-bottom: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-}
-
-.blog_list p {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.blog_list h1 {
-    width: 100%;
-    margin-bottom: 0px;
-}
-
-.blog_list .read_more {
-    margin-top: 9px;
-}
-
-#content_area {
-    display: flex;
-    box-sizing: border-box;
-    width: 75vw;
-    height: 90vh;
-    margin: 100px 40px 0px 15px;
-    border-radius: 10px;
-    border: 2px solid black;
-    background-color: white;
-    padding: 10px;
-
-}
-
-#form textarea {
-    height: 600px;
-    width: 70vw;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.form .form_elements {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-    gap: auto;
-
-}
-
-#form #submit {
-    background-color: lightgray;
-    /* Green */
-    border: 2px solid black;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    border-radius: 8px;
-}
-
-#form #upload_file {
-    /* background-color: lightgray;  */
-    /* border: 2px solid black; */
-    color: black;
-    /* padding: 15px 32px; */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-}
+/*blog css has it's own files visit it*/
 
 /* @media screen and (max-width: 1106px){
     .about_us{
@@ -459,73 +419,3 @@ footer .footer_links {
 
 /* Below is style for simple post page */
 
-#simple_post_container{
-    box-sizing: border-box;
-    display: flex;
-    margin: 100px 10vw 20px 10vw;
-    /* border: 2px solid red; */
-    height: auto;
-    padding: 10px;
-}
-
-#simple_post_container_main{
-    height: 100%;
-    width: 70%;
-    /* border: 2px solid green; */
-    box-sizing: border-box;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#simple_post_container_aside{
-    height: auto;
-    width: 30%;
-    /* border: 2px solid yellow; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.aside_list{
-    flex: 1 1 0px;
-    border-bottom: 2px solid black;
-    width: 80%;
-    padding: 1rem;
-    padding-top:3rem;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    
-
-}
-.aside_list p{
-    display: inline;
-}
-.aside_list_button{
-    /* display: inline; */
-    height: 30px;
-    width: 40px;
-}
-#simple_post_image{
-    /* border: 2px dotted purple; */
-    box-sizing: border-box;
-    flex-grow: 1;
-    max-height: 500px;
-    max-width: 100%;
-}
-#simple_post_image img{
-    max-height: 500px;
-    width: 100%;
-}
-#simple_post_text{
-    /* border: 2px dotted rgb(128, 0, 0); */
-    box-sizing: border-box;
-    flex-grow: 1;
-    min-width: 100%;
-    /* padding: 10px;*/
-    padding-top: 100px;
-    text-align: justify;
-}
