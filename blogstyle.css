@@ -83,15 +83,15 @@ body{
 }
 
 .read_more, #form #submit, #blogHeader input[type=file]::file-selector-button{
-        padding: 10px 20px;
-        border:none;
-        border-radius: 10px;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        transition:background .2s ease-in-out;
-        background-color: rgb(250, 230, 180);
-        text-transform: uppercase;
-        font-family: monospace;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition:background .2s ease-in-out;
+    background-color: rgb(250, 230, 180);
+    text-transform: uppercase;
+    font-family: monospace;
 }
 
 .read_more{
@@ -115,7 +115,7 @@ body{
 
 #form #submit:hover , .read_more:hover{
     background-color: rgb(250, 215, 126);
-    }
+}
 
 #content_area {
     float: right;
@@ -222,7 +222,7 @@ h1{
     font-size: 17px;
     font-family: 'custom font';
     font-weight: 600;
-    color: rgb(20, 20, 20);
+    color:rgb(20, 20, 20);
     background-color: white;
 }
 

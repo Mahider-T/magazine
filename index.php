@@ -47,7 +47,7 @@
                             <h1><?php echo $q['title']?></h1><br>
                             <?php echo '<img alt="" class = "suggestion_img" src="data:image/;base64,'.base64_encode($q['image']).'"/>' ?><br>
                             <sub style="color:gray"><?php echo "By : " . $q['authorname']?></sub>
-                            <div class="suggestion_p"><p><?php echo $q['body']?></p></div> <!--Sifen removed 'class = "fade-in"', it makes the text invisible-->
+                            <div class="suggestion_p"><?php echo $q['body']?></div> <!--Sifen removed 'class = "fade-in"', it makes the text invisible-->
                             <a href="viewBlog.php?id=<?php echo $q['id']?>">
                                 EXPLORE
                             </a>

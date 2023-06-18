@@ -175,6 +175,12 @@ main .container {
      background-color: red 
 } */
 
+.each_article h1{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
 /* style added by Sifen for the home page suggestions */
 .writer{
@@ -192,7 +198,7 @@ main .container {
     min-height:75px; 
     height:7px;  
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-top: 2px;
@@ -203,6 +209,7 @@ main .container {
     font-family:monospace;
     font-size: 16px;
     text-decoration: none;
+    background-color: inherit;
 }
 /* footer css rules*/
 footer {
