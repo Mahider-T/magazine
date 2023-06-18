@@ -53,7 +53,7 @@
                 <input class="inputs" type="text" name="title" id="title"  placeholder="Enter blog title here." required>
                 <!--<textarea cols="30" rows="15" id = "body" name="body" ></textarea><br><br> -->
             </section>
-            <textarea style="min-height:250px;padding: 30px 40px; border: 1px solid #727272;border-radius:3px;" class="textarea" contenteditable=""  placeholder="Enter blog content here" ></textarea>
+            <textarea name="body" id="body" style="min-height:250px;padding: 30px 40px; border: 1px solid #727272;border-radius:3px;" class="textarea" placeholder="Enter blog content here" required></textarea>
             <input type = "submit" value="Post" id = "submit" title="Post my draft !"><br><br>
                 <!-- <input type = "file" id = "upload_file"> -->
             </form>

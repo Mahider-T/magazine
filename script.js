@@ -45,10 +45,10 @@ function changeHeaderImage(){
         (index > 1)? index = 0: index++; 
     }
     window.onload = () => {
-        setInterval(changeImage,5000)
+        setInterval(changeImage,2500)
     } 
 }
-// changeHeaderImage();
+changeHeaderImage();
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

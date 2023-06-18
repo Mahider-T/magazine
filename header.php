@@ -45,20 +45,8 @@
                 <li><a href="https://www.freepnglogos.com/pics/logo-facebookpng" title="Image from freepnglogos.com"><img src="Icons/facebook_logo.png" width="20" alt="Facebook logo " /></a></li>
                 <li><a href="https://www.freepnglogos.com/pics/logo-twitter-png" title="Image from freepnglogos.com"><img src="Icons/twitter_logo.png" width="22" alt="twitter logo " /></a></li>
                 <li><a href="https://t.me/+E3jGdJxYKAY4YmVk" title="Image from freepnglogos.com"><img src="Icons/telegram_logo.png" width="20" alt="telegram logo" /></a></li>
-                <li><span id="humburger">menu</span></li>
+                <!-- <li><span id="humburger">menu</span></li> -->
             </ul>
-            <nav id="menu">
-            <li><a class="nav-link" href="index.php">Home page</a></li>
-                <?php foreach($queryFour as $q){
-                        if(true){
-                        $id = $q['id'];
-                        break;}
-                     }
-                ?>
-                <li><a class="nav-link" href="viewBlog.php?id=<?php echo $id?>">Simple post</a></li>
-                <li><a class="nav-link" href="about_us.php">About us</a></li>
-                <li><a class="nav-link" href="blog.php" id = "blog2">Blog</a></li>
-            </nav>
             <!--php to determine wether to show link to blog or not-->
             <?php
                 ob_start();

@@ -1,4 +1,9 @@
 /* From here to the bottom is a code for the blog page */
+@font-face {
+    font-family: "custom font";
+    src: url("fonts/Roboto-Light.ttf");
+}
+
 body{
     display:flex;flex-flow:column;height:150%;
 }
@@ -219,11 +224,6 @@ h1{
     font-weight: 600;
     color: rgb(20, 20, 20);
     background-color: white;
-}
-
-@font-face {
-    font-family: "custom font";
-    src: url("fonts/Roboto-Light.ttf");
 }
 
 /* .form .form_elements {
