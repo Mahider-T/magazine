@@ -20,22 +20,22 @@
 <div id = "main_container" 
         style="background-color:whitesmoke"
     >
-    <aside id = "blog_aside" style="height: 750px;border: 0.12rem solid rgb(191, 191, 191);
-                                    margin-left:1%">
+    <aside id = "blog_aside" style="height: 750px;
+                                    margin-left:0.5%;">
         <div id = "blog_aside_header">
-            <h1>Recently Added</h1>
+            <h1>My Blogs</h1>
         </div>
         <?php foreach($queryBlogAside as $q){ ?>
             <div class = "blog_list">
             <h1><?php echo $q['title']?></h1>
             <p><?php echo $q['body']?></p>
-            <a href="viewBlog.php?id=<?php echo $q['id']?>"><button class="read_more">Read more
+            <a href="viewBlog.php?id=<?php echo $q['id']?>"><button class="read_more" title="Explore this blog">Read more
             </button></a>
         </div>
         <?php }?>        
         
     </aside>
-    <main id = "content_area" style="height: 750px;
+    <main id = "content_area" style="height: 700px;
                                      border: 0.12rem solid rgb(191, 191, 191);">
         <form id = "form" action="blog.php" method="post" enctype="multipart/form-data">
             <section id="blogHeader">
@@ -47,18 +47,15 @@
                     <li>exlpore your previous posts in "My blogs" section</li>
                 </ul> 
                 <div id="uploadFile">
-                    <label id="labelUpload" for="image">Upload Image</label>
+                    <label id="labelUpload" for="image">Drop your image here <br> or </label>
                     <input type="file" name="image" accept="image/*" title="insert an image related to your blog"/>
                 </div>
                 <input class="inputs" type="text" name="title" id="title"  placeholder="Enter blog title here." required>
                 <!--<textarea cols="30" rows="15" id = "body" name="body" ></textarea><br><br> -->
             </section>
-            <textarea style="padding: 30px 40px; border: 1px solid #727272" class="textarea" contenteditable=""  placeholder="Enter blog content here" ></textarea>
-            </input>
-            <section id="blogFooter">
-                <input type = "submit" value="Post" id = "submit"><br><br>
+            <textarea style="min-height:250px;padding: 30px 40px; border: 1px solid #727272;border-radius:3px;" class="textarea" contenteditable=""  placeholder="Enter blog content here" ></textarea>
+            <input type = "submit" value="Post" id = "submit" title="Post my draft !"><br><br>
                 <!-- <input type = "file" id = "upload_file"> -->
-            </section>
             </form>
     </main>
             <!--php form handling-->
