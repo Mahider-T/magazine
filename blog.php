@@ -53,9 +53,10 @@
                 <input class="inputs" type="text" name="title" id="title"  placeholder="Enter blog title here." required>
                 <!--<textarea cols="30" rows="15" id = "body" name="body" ></textarea><br><br> -->
             </section>
-            <textarea name="body" id="body" style="min-height:250px;padding: 30px 40px; border: 1px solid #727272;border-radius:3px;" class="textarea" placeholder="- Enter the blog content here
+            <textarea name="body" id="body" minlength="300" maxlength="10000" style="min-height:250px;padding: 30px 40px; border: 1px solid #727272;border-radius:3px;" class="textarea" placeholder="- Enter the blog content here
 - Place your paragraphs in a  <p></p>  tag. 
-- All other standard mark up tags are also supported" required></textarea>
+- All other standard mark up tags are also supported
+- maximum of 10,000 characters" required></textarea>
             <input type = "submit" value="Post" id = "submit" title="Post my draft !"><br><br>
                 <!-- <input type = "file" id = "upload_file"> -->
             </form>

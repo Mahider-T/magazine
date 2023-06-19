@@ -62,15 +62,7 @@ header ul {
     list-style-type: none;
     gap: 2rem;
 }
-
-.each_article h1{
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-header #newspaper, .each_article h1 {
+header #newspaper{
     color:#a40434;
 }
 
@@ -101,116 +93,6 @@ header .icon-nav {
     font-size: xx-large;
 }
 
-.hero {
-    height: 450px;
-    position: relative;
-    /* border: solid red 5px;
-    display: flex;
-    background-image: url(Images/hero.jpg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px 0 30px; */
-}
-
-.overlay_elements {
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    top: 250px;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    z-index: 9998;
-}
-
-.hero #image2 {
-    /* position: absolute; */
-    transform: translate(100%, -101%);
-    display: none;
-}
-
-.hero-text {
-    color: white;
-}
-
-main .container {
-    /* float: left; */
-    display: flex;
-    /* flex-wrap: wrap;
-    /* flex-shrink: 1; */
-    height: auto;
-    width: auto;
-    margin: 3rem 10vw 3rem 10vw;
-    box-sizing: border-box;
-    /* border: 2px solid rgb(18, 0, 0); */
-
-}
-
-.divider {
-    /* background-color: gray; */
-    width: 32.0%;
-    /* min-width: 100px; */
-    height: 100%;
-    padding: 2%;
-}
-
-/* .container #divider_two {
-    /* background-color: yellow; 
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-} */
-
-.each_article{
-    height: auto;
-    padding: 2px 20px 10px;
-    border-right: 2px dashed black;
-    border-bottom: 2px dashed black;
-    border-bottom-right-radius: 5px;
-    /* background-color: rgb(192, 146, 146); */
-    margin-bottom: 20px;
-}
-
-/* .container .divider_three{
-     background-color: red 
-} */
-
-.each_article h1{
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-/* style added by Sifen for the home page suggestions */
-.writer{
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.suggestion_img {
-    border-radius:2px 2px 9px 2px; 
-    width: 100%; 
-    height:130px;
-    object-fit: cover;
-}
-.suggestion_p{
-    min-height:75px; 
-    height:7px;  
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin-top: 2px;
-}
-
-.each_article a{
-    margin-top: 5px;
-    font-family:monospace;
-    font-size: 16px;
-    text-decoration: none;
-    background-color: inherit;
-}
 /* footer css rules*/
 footer {
     height: auto;
