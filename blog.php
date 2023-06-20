@@ -29,6 +29,13 @@
     ob_start();
     include "auth.php";
     ob_end_clean();
+
+    //deletion query 
+    if(isset($_REQUEST['delete'])){
+        $id = $_REQUEST['id'];
+        $deletesql = "DELETE FROM blogs WHERE id = $id";
+        $query = mysqli_query($connection, $deletesql);
+    }
 ?>
 <div id = "main_container" 
         style="background-color:whitesmoke"
@@ -42,13 +49,13 @@
             <div class = "blog_list">
             <h1><?php echo $q['title']?></h1>
             <div class="asideBody"><?php echo $q['body']?></div>
-            <a href="viewBlog.php?id=<?php echo $q['id']?>?editFlag=1"><button class="read_more" title="Explore this blog">Read more
+            <a href="viewBlog.php?id=<?php echo $q['id']?>&edit=1"><button class="read_more" title="Explore this blog">Read more
             </button></a>
         </div>
         <?php }?>        
         
     </aside>
-    <main id = "content_area" style="height: 700px;
+    <main id = "content_area" style="height: 870px;
                                      border: 0.12rem solid rgb(191, 191, 191);">
         <form id = "form" action="blog.php" method="post" enctype="multipart/form-data">
             <section id="blogHeader">
@@ -66,7 +73,7 @@
                 <input class="inputs" type="text" name="title" id="title"  placeholder="Enter blog title here." required>
                 <!--<textarea cols="30" rows="15" id = "body" name="body" ></textarea><br><br> -->
             </section>
-            <textarea name="body" id="body" minlength="300" maxlength="10000" style="min-height:250px;padding: 30px 40px; border: 1px solid #727272;border-radius:3px;" class="textarea" placeholder="- Enter the blog content here
+            <textarea name="body" id="body" minlength="300" maxlength="10000" style="min-height:400px;padding: 30px 40px; border: 1px solid #727272;border-radius:3px;" class="textarea" placeholder="- Enter the blog content here
 - Place your paragraphs in a  <p></p>  tag. 
 - All other standard mark up tags are also supported
 - minimum 300 and maximum 10,000 characters" required></textarea>
@@ -100,6 +107,7 @@
                 $title = $_POST['title'];
                 $body = $_POST['body'];
                 $image = $_FILES["image"];
+
                  
                 //check if image file has been not been uploaded
                 if (!file_exists($_FILES['image']['tmp_name']) || !is_uploaded_file($_FILES['image']['tmp_name'])) 
@@ -120,7 +128,7 @@
                     $blob = addslashes(file_get_contents($image["tmp_name"]));              
                 
                     //Insert data into the database
-                    $sql = "INSERT INTO blogs (authorname, `image`, `name`, `type`, title, body)
+                    $sql = "INSERT INTO blogs (authorname, `image`, `iname`, `type`, title, body)
                     VALUES ('$author_name','$blob','$name', '$type', '$title', '$body')";
                 }                
 

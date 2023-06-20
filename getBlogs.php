@@ -56,4 +56,8 @@
         $query = mysqli_query($connection, $sql);
     }
 
+    // function delete ($id){
+    //     $sql = "DELETE FROM blogs WHERE id = $id";
+    // }
+
 ?>

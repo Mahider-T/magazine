@@ -49,6 +49,16 @@
                 <figcaption>Author :<?php echo $q['authorname']?> 
                 </figcaption><!--session name from joined tables -->
            </figure>
+           <a href="editBlog.php?id=<?php echo $_REQUEST['id']?>" id="editButton" 
+                    style="display: none; text-decoration:none;
+                         margin: 50px 10px 20px 10px;
+                         text-transform:uppercase; padding: 8px 80px; 
+                          font-family:monospace;
+                         font-size: 22px;
+                         background-color:rgb(244, 244, 244);
+                         border-radius:8px;
+                         border: 1px solid rgb(209, 209, 209);
+                        ">Edit</a>
           
         </main>
 
@@ -66,7 +76,13 @@
                 </div>
                 <?php endif;?>
                 <?php }?>
-                <?php }?>
+                <?php }
+                
+                    if(isset($_REQUEST['edit'])){
+                        echo "<script>document.getElementById('editButton').style.display = 'initial'</script>";
+                    }
+                
+                ?>
         </aside>
     </div>
     <div id = "footer_in_simple_post">
