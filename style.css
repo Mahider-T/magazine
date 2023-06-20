@@ -149,7 +149,7 @@ footer .footer_links {
 #description::first-letter{
     -webkit-initial-letter: 3;
     initial-letter:3;
-    color: goldenrod;
+    /* color: goldenrod; */
     font-weight: lighter;
 }
 

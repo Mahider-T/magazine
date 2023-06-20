@@ -49,7 +49,7 @@
                 <figcaption>Author :<?php echo $q['authorname']?> 
                 </figcaption><!--session name from joined tables -->
            </figure>
-            
+          
         </main>
 
         <aside id = "simple_post_container_aside">

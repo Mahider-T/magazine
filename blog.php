@@ -7,6 +7,19 @@
     <title>Blog</title>
     <link href="blogstyle.css" rel="stylesheet">
     <script src="script.js" defer></script>
+
+    <style>
+        .asideBody{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 5px;
+    color: #6b2929;
+    
+}
+    </style>
 </head>
 <body> 
 <?php
@@ -28,8 +41,8 @@
         <?php foreach($queryBlogAside as $q){ ?>
             <div class = "blog_list">
             <h1><?php echo $q['title']?></h1>
-            <p><?php echo $q['body']?></p>
-            <a href="viewBlog.php?id=<?php echo $q['id']?>"><button class="read_more" title="Explore this blog">Read more
+            <div class="asideBody"><?php echo $q['body']?></div>
+            <a href="viewBlog.php?id=<?php echo $q['id']?>?editFlag=1"><button class="read_more" title="Explore this blog">Read more
             </button></a>
         </div>
         <?php }?>        
@@ -56,7 +69,7 @@
             <textarea name="body" id="body" minlength="300" maxlength="10000" style="min-height:250px;padding: 30px 40px; border: 1px solid #727272;border-radius:3px;" class="textarea" placeholder="- Enter the blog content here
 - Place your paragraphs in a  <p></p>  tag. 
 - All other standard mark up tags are also supported
-- maximum of 10,000 characters" required></textarea>
+- minimum 300 and maximum 10,000 characters" required></textarea>
             <input type = "submit" value="Post" id = "submit" title="Post my draft !"><br><br>
                 <!-- <input type = "file" id = "upload_file"> -->
             </form>
