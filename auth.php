@@ -13,24 +13,30 @@
             margin: 0;
             padding: 0;
         }
+        @font-face {
+            font-family: "custom font";
+            src: url("fonts/Roboto-Light.ttf");
+        }
         .auth_page{
-            width: 50vw;
-            height: 100vh;
+            width: 50%;
+            height: 100%;
+            float: left;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
-            padding-right: 10px;
+            /* gap: 2rem; */
+            padding-right: 5%;
+            padding-left: 5%;
             flex-shrink: 1;
-            min-width: 550px;
+            min-width: fit-content;
 
         }
         .welcome{
             font-family: 'Times New Roman', Times, serif;
             font-family: 'Great Vibes', cursive;
             margin-bottom: 30px;
-            font-size: 50px;
+            font-size: 35px;
         }
         label{
             font-family: 'Times New Roman', Times, serif;
@@ -41,12 +47,16 @@
             display: flex;
         }
         #username,#password{
-            width: 400px;
-            height: 35px;
+            width: 350px;
+            height: 30px;
             margin-bottom: 10px;
+            font-family: "custom font";
+            font-weight: 600;
+            font-size: 16px;
+            padding-left: 15px;
         }
         #login, button{
-            width: 400px;
+            width: 350px;
             height: 45px;
             background-color: black;
             color: white;
@@ -56,7 +66,7 @@
         }
         .low{
             display: flex;
-            width:400px;
+            width:350px;
             justify-content: space-between;
         }
         .header{

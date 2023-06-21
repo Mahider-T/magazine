@@ -46,7 +46,7 @@
             align-items: center;
         }
 
-        #buttons input{
+        #buttons input, #buttons a{
             border-radius: 10px;
             color: rgb(0, 0, 0);
             cursor: pointer;
@@ -64,6 +64,7 @@
             height: auto;
             margin: auto;
             margin-top: 1%;
+            text-decoration: none;
         }
         #submit:hover{
             margin-top: 0.8%;
@@ -185,7 +186,7 @@
             //check if insertion was a success 
             if ($connection->query($sql) === TRUE) {
                 echo "<script>
-                    alert('edit successful!');
+                    alert('Edit successful!');
                     </script>";
             }
             // else{

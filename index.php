@@ -39,10 +39,9 @@
         <hr color="#eeeeee">
         <div class="container">
             <!-- <div class = "test" style="height: 500px; width: 500px; background-color:aqua"></div> -->
-            <!-- first division of suggestions -->
+            <!--suggestions of most recent 6 blogs-->
                 <?php
-                foreach ($query as $q) {
-                    $loopNumber++;?>
+                foreach ($query as $q) {?>
                         <div class="each_article">
                             <h1><?php echo $q['title'] ?></h1><br>
                             <?php echo '<img alt="" class = "suggestion_img" src="data:image/;base64,' . base64_encode($q['image']) . '"/>' ?><br>

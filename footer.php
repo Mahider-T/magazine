@@ -15,7 +15,7 @@
             <p>Categories</p>
         </div><br>
         <hr color="#a40434" style="margin:0px 20px;">
-        <div class = "father_container">
+        <div class = "father_container" style="display: flex; flex-direction:row;">
             <div class = "first footer_links">
                 <p id="description">
                 Daily newspaper magazine with interesting 
