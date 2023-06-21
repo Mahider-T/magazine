@@ -10,6 +10,7 @@
     $pass = "";
     $db = "uni_mag";
 
+    //connect to the database die if unable to connect
     $connection  = mysqli_connect($host, $user, $pass, $db);
     if(!$connection){
         die("unable to connect.");
@@ -42,10 +43,6 @@
     $sqlEditors  = "SELECT * FROM author_information";
     $queryEditors = mysqli_query($connection, $sqlEditors);
     
-    
-    // echo "<script>alert('this is $Name')</script>";
-    // $sqlAuthor = "SELECT * FROM blogs WHERE authorname = '$Name' ";
-    // $queryAuthor = mysqli_query($connection, $sqlAuthor);
 
     //query which diplay specific contents of a blog if readmore is triggered
     if(isset($_REQUEST['id'])){
@@ -55,9 +52,4 @@
                 WHERE blogs.authorname = author_information.name and blogs.id = $id";
         $query = mysqli_query($connection, $sql);
     }
-
-    // function delete ($id){
-    //     $sql = "DELETE FROM blogs WHERE id = $id";
-    // }
-
 ?>

@@ -39,6 +39,7 @@
         #uploadFile button:hover {
             background-color: rgb(250, 215, 126);
         }
+
         #buttons {
             display: flex;
             flex-direction: row;
@@ -46,11 +47,12 @@
             align-items: center;
         }
 
-        #buttons input, #buttons a{
+        #buttons input,
+        #buttons a {
             border-radius: 10px;
             color: rgb(0, 0, 0);
             cursor: pointer;
-            transition:background .2s ease-in-out;
+            transition: background .2s ease-in-out;
             background-color: rgb(244, 244, 244);
             text-transform: uppercase;
             font-family: monospace;
@@ -60,22 +62,25 @@
             font-size: large;
             min-width: fit-content;
             padding: 1% 3%;
-            width:auto;
+            width: auto;
             height: auto;
             margin: auto;
             margin-top: 1%;
             text-decoration: none;
         }
-        #submit:hover{
+
+        #submit:hover {
             margin-top: 0.8%;
             background-color: rgb(244, 244, 244);
-            border : 1.5pt  solid rgb(35, 108, 9, 0.6);
+            border: 1.5pt solid rgb(35, 108, 9, 0.6);
         }
-        #delete:hover{
+
+        #delete:hover {
             margin-top: 0.8%;
-            border : 1.5pt  solid rgb(108, 9, 9, 0.6);
+            border: 1.5pt solid rgb(108, 9, 9, 0.6);
         }
-        #cancel:hover{
+
+        #cancel:hover {
             margin-top: 0.8%;
             border: 1.5pt solid #888;
         }
@@ -93,6 +98,7 @@
     $id = $_REQUEST['id'];
     ?>
     <div id="main_container" style="background-color:whitesmoke">
+        <!-- suggestions on the side of the page -->
         <aside id="blog_aside" style="height: 750px;
                                     margin-left:0.5%;">
             <div id="blog_aside_header">
@@ -108,10 +114,11 @@
             <?php } ?>
 
         </aside>
+        <!-- main content editing area  -->
         <main id="content_area" style="height: 870px;
                                      border: 0.12rem solid rgb(191, 191, 191);">
             <?php foreach ($query as $q) { ?>
-                <form id="form" action="editBlog.php?id=<?php echo $_REQUEST['id']?>" method="post" enctype="multipart/form-data">
+                <form id="form" action="editBlog.php?id=<?php echo $_REQUEST['id'] ?>" method="post" enctype="multipart/form-data">
                     <section id="blogHeader">
                         <h1>Welcome back <?php echo $_SESSION['Name'] ?> !</h1>
                         <hr color="#a40434" style="margin:10px 0px 10px -25px">
@@ -119,7 +126,7 @@
                             <label id="labelUpload" class="upload" for="image">Drop your image here <br> or </label>
                             <input id="uploadInput" type="file" class="upload" name="image" accept="image/*" title="insert an image related to your blog">
                             <span id="uploadSpan">Current Image: <?php echo $q['iname'] ?><br> type: <?php echo $q['type'] ?></span>
-                            <button type="button"  id="uploadButton">Change Image</button>
+                            <button type="button" id="uploadButton">Change Image</button>
                         </div>
                         <input class="inputs" type="text" name="title" id="title" placeholder="Enter blog title here." required value="<?php echo $q['title'] ?>">
                     </section>
@@ -131,8 +138,8 @@
                 <?php } ?>
                 <div id="buttons">
                     <input type="submit" value="confirm" id="submit" title="Post my draft !"><br><br>
-                    <a href="viewBlog.php?id=<?php echo $id?>&edit=1" id="cancel" title="quit editing">cancel</a>
-                    <a href="blog.php?id=<?php echo $id?>&delete=1" id="delete" title="delete post">delete</a>
+                    <a href="viewBlog.php?id=<?php echo $id ?>&edit=1" id="cancel" title="quit editing">cancel</a>
+                    <a href="blog.php?id=<?php echo $id ?>&delete=1" id="delete" title="delete post">delete</a>
                 </div>
                 </form>
         </main>
@@ -146,16 +153,6 @@
             $db = "uni_mag";
 
             $connection = new mysqli($host, $user, $pass, $db) or die("unable to connect");
-            //check for duplicated daily post -- not done yet 
-            // $sqluser = "SELECT username FROM user_information WHERE username = '$username'";
-            // $qresult=mysqli_query($connection, $sqluser);
-            // $count=mysqli_num_rows($qresult);
-
-            // if($count > 0)
-            // {
-            //     echo"<div id=\"submit_replyE\">Username is already taken</div>";
-            // }
-            // else{
 
             // Retrieve form data
             $author_name = $_SESSION['Name'];
@@ -163,11 +160,11 @@
             $body = $_POST['body'];
             $image = $_FILES["image"];
 
-            //check if image file has been not been uploaded
+            //check if image file has been not been changed
             if (!file_exists($_FILES['image']['tmp_name']) || !is_uploaded_file($_FILES['image']['tmp_name'])) {
                 $sql = "UPDATE blogs set title = '$title', body = '$body' where id = $id ";
                 $thequery = mysqli_query($connection, $sql);
-            } else //if image file has been uploaded
+            } else //if image file has been changed
             {
                 $info = getimagesize($image["tmp_name"]);
                 // check if $image is an image file
@@ -189,15 +186,13 @@
                     alert('Edit successful!');
                     </script>";
             }
-            // else{
-            //     echo "<script>alert(\"couldn't record your data. please try again!\")</script>";
-            // }
         }
         ?>
     </div>
     <?php
     include("footer.php");
     ?>
+    <!-- java script for to change display upon change image button selection -->
     <script>
         let uploadButton = document.getElementById("uploadButton");
         let uploadSpan = document.getElementById("uploadSpan");

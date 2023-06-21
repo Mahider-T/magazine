@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magazine</title>
-    <script src="script.js" defer></script> 
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="home.css">
 </head>
 
@@ -19,6 +19,7 @@
     include "auth.php";
     ob_end_clean();
     ?>
+    <!-- static part of the home page -->
     <div class="hero" id="top_of_the_page">
         <img src="Images/image2.jpg" width="100%" height="100%" id="image1" style="object-fit:cover">
         <div class="overlay_elements">
@@ -38,20 +39,19 @@
         <br>
         <hr color="#eeeeee">
         <div class="container">
-            <!-- <div class = "test" style="height: 500px; width: 500px; background-color:aqua"></div> -->
-            <!--suggestions of most recent 6 blogs-->
-                <?php
-                foreach ($query as $q) {?>
-                        <div class="each_article">
-                            <h1><?php echo $q['title'] ?></h1><br>
-                            <?php echo '<img alt="" class = "suggestion_img" src="data:image/;base64,' . base64_encode($q['image']) . '"/>' ?><br>
-                            <sub style="color:gray"><?php echo "By : " . $q['authorname'] ?></sub>
-                            <div class="suggestion_p"><?php echo $q['body'] ?></div> <!--Sifen removed 'class = "fade-in"', it makes the text invisible-->
-                            <a href="viewBlog.php?id=<?php echo $q['id'] ?>">
-                                EXPLORE
-                            </a>
-                        </div>
-                <?php } ?>
+            <!--suggestions of most recent 6 blogs fetched from the database-->
+            <?php
+            foreach ($query as $q) { ?>
+                <div class="each_article">
+                    <h1><?php echo $q['title'] ?></h1><br>
+                    <?php echo '<img alt="" class = "suggestion_img" src="data:image/;base64,' . base64_encode($q['image']) . '"/>' ?><br>
+                    <sub style="color:gray"><?php echo "By : " . $q['authorname'] ?></sub>
+                    <div class="suggestion_p"><?php echo $q['body'] ?></div> <!--Sifen removed 'class = "fade-in"', it makes the text invisible-->
+                    <a href="viewBlog.php?id=<?php echo $q['id'] ?>">
+                        EXPLORE
+                    </a>
+                </div>
+            <?php } ?>
         </div>
         <a href id="next">next...</a>
     </main>

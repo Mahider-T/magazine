@@ -12,16 +12,18 @@
             margin: 0;
             padding: 0;
         }
+        @font-face {
+            font-family: "custom font";
+            src: url("fonts/Roboto-Light.ttf");
+        }
         .auth_page{
             display: flex;
-            margin-top: 100px;
-
+            /* margin-top: 100px; */
         }
         .right{
             display: flex;
             min-width: 50vw;
             height: 100vh;
-            border: 2px solid black;
             box-sizing: border-box;
             margin: 5px;
             background-color: green;
@@ -35,7 +37,6 @@
             flex-direction: column;
             min-width: 50vw;
             height: 100vh;
-            border: 2px solid black;
             box-sizing: border-box;
             margin: 5px;
             padding: 30px;
@@ -53,6 +54,7 @@
             display: flex;
             flex-direction: column;
             gap: 100px;
+            margin-bottom: 50px;
 
 
         }
@@ -67,6 +69,10 @@
         #division_two .box{
             width: 400px;
             height: 30px;
+            padding-left: 20px;
+            font-family: "custom font";
+            font-weight: 600;
+            font-size: 20px;
         }
         #division_two #login{
             width: 400px;
@@ -105,10 +111,6 @@
     </style>
 </head>
 <body>
-    <!--adding header php file-->
-    <?php
-        include('header.php');
-    ?>
     <div class = "auth_page">
         <!--the sign up form section-->
         <div class="left">

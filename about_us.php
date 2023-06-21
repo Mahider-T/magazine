@@ -13,6 +13,7 @@
         include ('getBlogs.php');
     ?>
     <br><br><br>
+    <!-- demo data about the editors -->
     <main class = "about_us">
         <div class = "about_header"><h1>About us</h1></div>
         
@@ -55,7 +56,7 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus veniam, provident corrupti in magnam accusamus, necessitatibus mollitia iste beatae perspiciatis pariatur non possimus tempora fugit nostrum. Vel atque deleniti tempore?</p>
             </div>
         </div>
-
+        <!-- data fetched from the author table on database -->
         <div class = "group_members">
         <?php foreach($queryEditors as $q){ ?>
             <div class = "member_list">
