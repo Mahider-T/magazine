@@ -1,2 +1,2 @@
 # uni_mag
-Magazine for university
+Magazine for university.
